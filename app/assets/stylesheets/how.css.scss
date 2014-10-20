@@ -1,0 +1,38 @@
+#how {
+  #instructions {
+    height: auto;
+    background-color: #f5f5f5;
+    display: inline-block;
+
+    #image-slider {
+      height: auto;
+      width: 300px;
+      z-index: 1000;
+    }
+    .step {
+      min-height: 250px;
+      height: auto;
+      padding: 10px;
+      margin-left: 20px;
+      p {
+        text-align: justify;
+      }
+    }
+
+    .step-color {
+      margin-top: 54px;
+      margin-left: 10px;
+    }
+    img {
+      margin-right: 40px;
+    }
+  }
+  .bx-wrapper {
+    text-align: center;
+    margin: 0 0 0 50px;
+    display: inline-block;
+    img {
+      padding: 10px;
+    }
+  }
+}

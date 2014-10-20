@@ -1,0 +1,42 @@
+
+%h3 Update/Add/Delete Image
+
+.form-md
+
+  =simple_form_for @admin_social_media, :url => {:action => 'change_image'}, remote: true do |f|
+
+    =f.input :id, :as => :hidden
+
+    =f.input :image_id, :as => :hidden, id: 'image_id'
+    =f.input :original_secret, :as => :hidden, id: 'original_secret'
+
+    #form-gallery
+
+    =f.button :submit, 'Update Social Media', class: 'btn-default'
+
+
+:javascript
+
+  var ready = function () {
+
+    // show the image gallery
+      var form_name = 'admin_social_media';
+      var photoset = '72157646513205214';
+      var container = '#form-gallery';
+      var size = 's';
+      var callback = selectImage;
+      var image_id_field = 'image_id';
+      var original_secret_field = 'original_secret';
+
+
+      getFlickrImages(form_name, photoset, container, size, callback, image_id_field, original_secret_field);
+
+      //initialise the form buttons
+      $('.btn').button();
+    };
+
+    $(document).ready(ready);
+    $(document).on('page:load', ready);
+
+
+

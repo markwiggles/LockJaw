@@ -1,0 +1,12 @@
+
+
+
+$('.sortable-list').remove();
+
+$('#email-content').html("<%= j render :partial => 'admin_emails/content' %>");
+
+
+// Call to admin function initialiseSortableList(listElement, urlPost, urlCallback)
+initialiseSortableList('#sortable-emails','admin_emails/update_list_order', 'admin_emails/index');
+
+$('.switch').initialiseSwitches('admin_emails/update_visibility',null);

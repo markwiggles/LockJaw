@@ -1,0 +1,18 @@
+
+%h3.alert-danger.short-msg.text-center Delete contact - Are you sure?
+
+.form-sm
+
+  %u You are contact to delete this contact
+
+  %p
+    =truncate(@admin_contact.heading, length: 50, omission: '......')
+
+  %p
+    =@admin_contact.content
+
+  %br
+  %br
+
+  =button_to 'DELETE SECTION', {:action => 'destroy', :id => @admin_contact.id},
+  :method => :delete, class: 'btn-default'

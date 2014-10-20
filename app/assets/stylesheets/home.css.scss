@@ -1,0 +1,141 @@
+
+.home {
+  position: relative;
+  height: auto;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  text-align: justify;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.testimonial {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.news-content .bx-wrapper {
+  width: 470px;
+  display: inline-block;
+  padding-left: 20px;
+  z-index: $zindex_button;
+}
+
+.testimonial p {
+  margin: 0 25px 0 0;
+  padding: 0;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+}
+
+.image-slider {
+  position: relative;
+}
+
+#poster {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  img {
+    width: 90%;
+  }
+}
+
+#tabs a:hover {
+  cursor: pointer;
+}
+
+.intro {
+  padding-top: 30px;
+  & iframe,
+  & object,
+  & embed {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 75%;
+    height: 75%;
+    margin-left: 12%;
+  }
+}
+
+.absolute {
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  display: none;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  z-index: 1002;
+}
+
+.video-player {
+  padding-top: 30px;
+  & iframe, & object, & embed {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 75%;
+    height: 75%;
+    margin-left: 12%;
+  }
+}
+
+#outer {
+  width: auto;
+  height: auto;
+}
+
+.close-icon {
+  float: right;
+  margin-right: 10%;
+  width: 4%;
+  height: auto;
+  Z-index: 1000;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.overlay {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color:#000;
+  opacity:0.8;
+  display:none;
+  z-index:1001;
+}
+
+
+
+
+
+
+
+

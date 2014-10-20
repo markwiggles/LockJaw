@@ -1,0 +1,27 @@
+
+
+#tabs-section.news-tabs
+
+  -# The selected tab
+  %ul
+    %li
+      =link_to "#{@admin_tab.name}", "#tabs-#{@admin_tab.id}"
+
+
+
+  -# The content
+  %div{:id => "tabs-#{@admin_tab.id}"}
+
+    %h3{class: show_heading_if_available(@admin_tab)}
+      =@admin_tab.heading
+
+    %ul.sortable-list
+
+      =render 'sections'
+
+
+
+
+
+
+

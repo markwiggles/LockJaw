@@ -1,0 +1,11 @@
+
+
+/*Create the sortable tabs with the list id as the admin_tab id */
+.tab-view
+  %ul
+    -@admin_tabs_visible.each do |tab|
+      %li{:id => tab.id}
+        =link_to "#{tab.name}", "#tabs-#{tab.id}"
+
+
+

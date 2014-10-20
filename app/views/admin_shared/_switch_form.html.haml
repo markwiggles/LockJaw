@@ -1,0 +1,6 @@
+
+-# Switch input element for form
+
+=f.input :visible, :as => :hidden, input_html: {value: 0}
+-visibility = model_attribute.visible == 1 ? true : false
+=check_box_tag "#{param}[visible]", '1', visibility, :class => 'switch'

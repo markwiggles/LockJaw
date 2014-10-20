@@ -1,0 +1,33 @@
+
+%h3 Edit FAQ
+
+.container.form-md
+
+  =simple_form_for @admin_buymsg, :url => {:action => 'update'}, remote: true do |f|
+
+    =f.input :id, :as => :hidden
+
+    -# The switch button
+    =render partial: 'admin_shared/switch_form', locals: {f: f, model_attribute: @admin_buymsg, :param => 'admin_buymsg'}
+
+    =f.input :message, autofocus: true, class: 'buymsg', default: 0
+    =f.input :letter_spacing, input_html: {style: 'width: 80px; margin-top: 0;'}, inline_label: 'Letter Spacing'
+    %br
+    =f.button :submit, 'Update FAQ', class: 'btn-default'
+
+
+
+:javascript
+
+  var ready = function () {
+
+
+    /*Call the custom jQuery method to initialise the switches
+     jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) */
+  $('.switch').initialiseSwitches(null,null);
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+

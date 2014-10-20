@@ -1,0 +1,10 @@
+
+%h3 Create New social_media
+.container.form-md
+
+  =simple_form_for @admin_social_media, :url => {:action => 'create'}, remote: true do |f|
+
+    =f.input :link, autofocus: true
+    =f.input :alt
+    %br
+    =f.button :submit, 'Create New Social Media Link', class: 'btn-default'

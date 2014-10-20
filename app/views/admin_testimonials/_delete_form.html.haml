@@ -1,0 +1,18 @@
+
+%h3.alert-danger.short-msg.text-center Delete Testimonial - Are you sure?
+
+.form-sm
+
+  %u You are about to delete this testimonial
+
+  %p
+    =truncate(@admin_testimonial.content, length: 50, omission: '......')
+
+  %p.text-center
+    =@admin_testimonial.signature
+
+  %br
+  %br
+
+  =button_to 'DELETE SECTION', {:action => 'destroy', :id => @admin_testimonial.id},
+  :method => :delete, class: 'btn-default'

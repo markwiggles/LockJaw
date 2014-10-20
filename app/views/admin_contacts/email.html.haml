@@ -1,0 +1,17 @@
+.container.admin
+
+  .row
+    %h2 Email Settings
+  .row
+    .col-lg-6
+
+      =logger.debug "ADMIN EMAIL BEFORE #{@admin_email_settings}"
+
+      =render :partial => 'admin_shared/email', :locals => {admin_email_settings: @admin_email_settings}
+      =link_to '<i class="fa fa-edit fa-lg image-link"></i>'.html_safe, edit_email_admin_contacts_path(:id=> 1),style: 'float:right; margin-right: 80px;', remote: true
+
+    .col-lg-6
+      .container.form-md
+
+        .form-view
+

@@ -1,0 +1,18 @@
+
+%h3.alert-danger.short-msg.text-center Delete social_media - Are you sure?
+
+.form-sm
+
+  %u You are social_media to delete this social_media
+
+  %p
+    =truncate(@admin_social_media.link, length: 50, omission: '......')
+
+  %p
+    =@admin_social_media.alt
+
+  %br
+  %br
+
+  =button_to 'DELETE SOCIAL MEDIA LINK', {:action => 'destroy', :id => @admin_social_media.id},
+  :method => :delete, class: 'btn-default'

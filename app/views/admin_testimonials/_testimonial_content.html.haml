@@ -1,0 +1,20 @@
+
+
+-# The selected tab
+
+-# The content
+
+%ul#sortable-testimonials.sortable-list.col-lg-12
+
+  -@admin_testimonials.each do |testimonial|
+
+    %li{id: testimonial.id, :class => ('opaque' if !testimonial.visible?)}
+      %p.quote
+        =add_paragraph_breaks testimonial.content
+
+      %p.signature
+        =testimonial.signature
+
+      .edit-delete
+        =link_to '<i class="fa fa-edit fa-lg image-link"></i>'.html_safe, edit_admin_testimonial_path(:id => testimonial.id), remote: true
+        =link_to '<i class="fa fa-times-circle fa-lg image-link"></i>'.html_safe, {:action => 'delete_testimonial', :id => testimonial.id},  remote: true

@@ -1,0 +1,18 @@
+
+%h3.alert-danger.short-msg.text-center Delete Section - Are you sure?
+
+.container.form-md
+
+  %u You are about to delete all the associated content in this section
+
+  %h4{class: ('hide-elem' if @admin_section.sub_heading == '') }
+  =@admin_section.sub_heading
+
+  %p
+  =truncate(@admin_section.content, length: 50, omission: '......')
+
+  %br
+  %br
+
+  =button_to 'DELETE SECTION', {:action => 'destroy', :id => @admin_section.id},
+  :confirm => "Are you sure  #{@admin_section.sub_heading}?", :method => :delete, class: 'btn-default'

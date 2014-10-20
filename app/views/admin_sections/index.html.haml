@@ -1,0 +1,55 @@
+.container.admin
+
+  =link_to ('<i class="fa fa-backward fa-2x"></i> back to tabs'.html_safe), admin_tabs_path
+
+  .row.heading
+
+    %h2 Section Updates
+
+    -# New Section
+    =link_to (button_tag '<i class="fa fa-navicon"></i> New'.html_safe, class: 'btn btn-default btn-lg new-btn'),
+        new_admin_section_path(:admin_tab_id => @admin_tab.id), remote: true
+
+  .row
+    .col-lg-7
+
+      -#  Show the current sections (if any) in a sortable list with heading and content
+      =render 'tab_content', locals: @admin_sections
+
+    -# Show the New/Edit form
+    .col-lg-5
+      .form-view.create-content
+
+
+
+
+
+
+
+-#
+-#= javascript_include_tag "//code.jquery.com/ui/1.11.1/jquery-ui.js"
+
+
+:javascript
+
+
+
+  var ready = function () {
+
+  $("#tabs-section").tabs();
+  initialiseSortableList('.sortable-list','admin_sections/update_section_order', 'admin_sections/sections');
+
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+
+
+
+
+:css
+
+  .ui-state-active {
+  color: blue !important;
+  }

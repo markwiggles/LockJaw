@@ -1,0 +1,15 @@
+#price-box-wrapper
+  #price-box
+    %h1 $#{spree_price}
+    .unit-std
+      %h4.usd USD
+      %h4 per unit
+    %h3{style: "letter-spacing: #{buymsg.letter_spacing}px "}
+      =buymsg.message
+
+    =link_to image_tag('buy_now.png', alt: 'buy now', class: 'image-link'), '/shop'
+    .card-images
+      =image_tag 'mastercard.png', size: '30x17'
+      =image_tag 'visa.png', size: '30x17'
+      =image_tag 'paypal.png', size: '30x17'
+      =image_tag 'amex.png', size: '30x17'

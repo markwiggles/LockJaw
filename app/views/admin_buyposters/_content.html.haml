@@ -1,0 +1,25 @@
+
+
+-# The content
+
+%ul#sortable-buyposters.sortable-list.col-lg-12
+
+  -@admin_buyposters.each do |buyposter|
+
+    %li{id: buyposter.id, :class => ('opaque' if !buyposter.visible?)}
+
+      %h4.text-primary Poster Name
+      %p
+        =buyposter.alt
+        -if buyposter.image_id != nil && buyposter.image_id != 'no_image'
+          =image_tag change_image_url_to_thumbnail(buyposter.image_url), class:'thumbnail blog-img' #, style: "float: #{buyposter.image_position};"
+
+      %h4.text-primary Active link
+      %p
+        =buyposter.link
+
+
+      .edit-delete
+        =link_to '<i class="fa fa-edit fa-lg image-link"></i>'.html_safe, edit_admin_buyposter_path(:id => buyposter.id), remote: true
+        =link_to '<i class="fa fa-times-circle fa-lg image-link"></i>'.html_safe, {:action => 'delete', :id => buyposter.id},  remote: true
+        =link_to '<i class="fa fa-file-photo-o fa-lg image-link"></i>'.html_safe, edit_image_admin_buyposter_path(:id => buyposter.id ),  remote: true

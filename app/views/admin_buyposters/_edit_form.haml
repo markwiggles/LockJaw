@@ -1,0 +1,33 @@
+
+%h3 Edit buyposter
+
+.container.form-md
+
+  =simple_form_for @admin_buyposter, :url => {:action => 'update'}, remote: true do |f|
+
+    =f.input :id, :as => :hidden
+
+    -# The switch button
+    =render partial: 'admin_shared/switch_form', locals: {f: f, model_attribute: @admin_buyposter, :param => 'admin_buyposter'}
+
+    =f.input :link, autofocus: true
+    =f.input :alt
+    %br
+    =f.button :submit, 'Edit Poster', class: 'btn-default'
+
+
+
+:javascript
+
+  var ready = function () {
+
+
+    /*Call the custom jQuery method to initialise the switches
+     jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) */
+  $('.switch').initialiseSwitches(null,null);
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+

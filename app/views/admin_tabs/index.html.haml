@@ -1,0 +1,43 @@
+.container.admin
+
+  .row.heading
+
+    %h2 Tabs Updates
+
+    -# New Tab
+    =link_to (button_tag '<i class="fa fa-folder"></i> New'.html_safe, class: 'btn btn-default btn-lg new-btn'),
+    new_admin_tab_path, remote: true
+
+  .row.height-md
+    .col-lg-7
+
+      .current-tabs
+        -# Display the tabs as they would appear
+        =render 'shared/sortable_tabs', locals: @admin_tabs_visible
+
+    .col-lg-5.height-md
+      .form-view.height-md.col-lg-5
+
+  .row.col-lg-12
+
+    .table-view
+      =render 'table', :locals => @admin_tabs_rev
+
+
+
+:javascript
+
+  var ready = function () {
+
+      /*Call the custom jQuery method to initialise the switches
+      jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) */
+      $('.switch').initialiseSwitches('admin_tabs/update_tab_visibility','admin_tabs/sortable');
+
+
+      $('.tab-view').initialiseSortableTabs();
+      $("#tabs-section").tabs();
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);

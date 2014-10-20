@@ -1,0 +1,34 @@
+
+
+.main-content#blog-content
+
+  %h3.text-primary
+    =@tab.heading
+
+  -@sections.each do |section|
+
+    %h4{class: ('hide-elem' if section.sub_heading == '')}
+      =section.sub_heading
+    -if section.image_id != nil && section.image_id != 'no_image'
+      =image_tag section.image_url_blog, class:'thumbnail blog-img', style: "float: #{section.image_position_blog}"
+    %p.lead
+      =add_paragraph_breaks section.content
+
+    <hr>
+  #blog-links
+
+    %h4
+      See Related Topics
+
+    -@admin_tabs_visible.each do |tab|
+
+      -if tab.id.to_s != params[:id].to_s
+        =link_to tab.heading, blog_path(tab.id)
+        %br
+
+
+
+  #back-link.pull-right
+    =link_to '<i class="fa fa-home  fa-lg image-link"><small> back<small></i>'.html_safe, home_path
+
+

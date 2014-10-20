@@ -1,0 +1,13 @@
+.main-content#testimonials
+  %h2.text-primary Some feedback from our users
+
+
+  -@testimonials.each do |testimonial|
+    .testimonial
+      %blockquote
+        =add_double_line_breaks testimonial.content
+        %br
+        %footer.pull-right
+          %cite
+            =testimonial.signature
+        %br

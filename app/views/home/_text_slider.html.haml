@@ -1,0 +1,17 @@
+%ul.bxslider2
+
+  -@testimonials.each do |testimonial|
+
+    %li
+      .testimonial
+        %blockquote
+          =add_double_line_breaks testimonial.content
+          %br
+          %footer.pull-right
+            %cite
+              =testimonial.signature
+          %br
+
+
+
+

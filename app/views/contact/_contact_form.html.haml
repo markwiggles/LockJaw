@@ -1,0 +1,10 @@
+%fieldset
+  =simple_form_for(@admin_message, :url => {:action => 'create_message'}, :html => {:honeypot => true}, remote: true) do |f|
+
+    =f.input_field :name, placeholder: 'your name', autofocus: true, label: false, required: true
+    =f.input_field :email, placeholder: 'your email',label: false,  required: true
+    =f.input_field :message, placeholder: 'your message', label: false, as: :text,
+    required: true,:input_html => {:rows => 2}
+
+
+    =f.button :submit, '&#xf1d9 &nbsp;&nbsp;&nbsp;Send Message'.html_safe, :class => 'btn-default', data: { :disable_with => 'Please wait...'}

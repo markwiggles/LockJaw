@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+
+<%= image_tag @settings.image_url %>
+
+<h3><%= @settings.heading %></h3>
+
+<p><%= "#{@settings.greeting} #{@contact.name}" %></p>
+
+
+<p><%= add_paragraph_breaks @settings.body %></p>
+
+<br>
+
+<p><%= add_single_line_breaks @settings.signature  %></p>
+
+
+</body>
+</html>

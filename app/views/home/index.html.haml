@@ -1,0 +1,20 @@
+.container.home
+  .container.row
+    =render 'shared/subheader'
+
+  .container.row.image-slider
+    =render 'image_slider'
+
+    #poster
+
+  .container.row.news
+    =render 'tabs_content'
+
+    #testimonial-slider
+      =render 'text_slider'
+
+.container.absolute
+  =render 'video'
+
+.overlay
+  =render 'video'

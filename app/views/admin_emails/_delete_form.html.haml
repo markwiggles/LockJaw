@@ -1,0 +1,21 @@
+
+%h3.alert-danger.short-msg.text-center Delete email - Are you sure?
+
+.form-sm
+
+  %u You are email to delete this email
+
+  %p
+    =@admin_email.heading
+
+  %p
+    =truncate(@admin_email.body, length: 50, omission: '......')
+
+  %p
+    =@admin_email.signature
+
+  %br
+  %br
+
+  =button_to 'DELETE EMAIL', {:action => 'destroy', :id => @admin_email.id},
+  :method => :delete, class: 'btn-default'

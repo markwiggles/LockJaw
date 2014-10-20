@@ -1,0 +1,11 @@
+$('.tab-view').remove();
+
+
+$('.current-tabs').html("<%= j render :partial => 'shared/sortable_tabs' %>")
+
+
+$('.tab-view').initialiseSortableTabs();
+
+sendAjaxCall('admin_tabs/tableview', null);
+
+

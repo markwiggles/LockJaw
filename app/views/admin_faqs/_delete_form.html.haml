@@ -1,0 +1,18 @@
+
+%h3.alert-danger.short-msg.text-center Delete FAQ - Are you sure?
+
+.form-sm
+
+  %u You are about to delete this faq
+
+  %p
+    =truncate(@admin_faq.question, length: 50, omission: '......')
+
+  %p
+    =@admin_faq.answer
+
+  %br
+  %br
+
+  =button_to 'DELETE SECTION', {:action => 'destroy', :id => @admin_faq.id},
+  :method => :delete, class: 'btn-default'

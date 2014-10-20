@@ -1,0 +1,11 @@
+
+%h3 Edit Tab
+
+.container.form-md
+
+  =simple_form_for @admin_tab, :url => {:action => 'update'}, remote: true do |f|
+
+    =f.input :name, required: true, autofocus: true
+    =f.input :heading
+    %br
+    =f.button :submit, 'Update Tab', class: 'btn-default'

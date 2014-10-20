@@ -1,0 +1,10 @@
+
+%h3 Create New about
+.container.form-md
+
+  =simple_form_for @admin_about, :url => {:action => 'create'}, remote: true do |f|
+
+    =f.input :heading, autofocus: true, class: 'about'
+    =f.input :content, as: :text, :required => true, class: 'about',:input_html => {:rows => 10, :cols => 54}
+    %br
+    =f.button :submit, 'Create New about', class: 'btn-default'

@@ -1,0 +1,12 @@
+
+%h3 Create New Tab
+.container.form-md
+
+  =simple_form_for @admin_tab, :url => {:action => 'create_tab'}, remote: true do |f|
+
+    =f.input :name, required: true, autofocus: true
+    =f.input :heading
+    %br
+    =f.button :submit, 'Create New Tab', class: 'btn-default'
+
+

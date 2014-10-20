@@ -1,0 +1,10 @@
+
+%h3 Create New how
+.container.form-md
+
+  =simple_form_for @admin_how, :url => {:action => 'create'}, remote: true do |f|
+
+    =f.input :heading, autofocus: true, class: 'how'
+    =f.input :content, as: :text, :required => true, class: 'how',:input_html => {:rows => 10, :cols => 54}
+    %br
+    =f.button :submit, 'Create New how', class: 'btn-default'

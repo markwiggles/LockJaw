@@ -1,0 +1,12 @@
+
+
+
+$('.sortable-list').remove();
+
+$('#how-content').html("<%= j render :partial => 'admin_hows/content' %>");
+
+
+// Call to admin function initialiseSortableList(listElement, urlPost, urlCallback)
+initialiseSortableList('#sortable-hows','admin_hows/update_list_order', 'admin_hows/index');
+
+$('.switch').initialiseSwitches('admin_hows/update_visibility',null);

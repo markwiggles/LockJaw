@@ -1,0 +1,31 @@
+
+
+-# Display the tabs table for selection
+
+%table.table.table-striped
+  %thead
+    %th.text-string-md Name
+    %th.text-string-lg Heading
+    -(0..3).each do
+      %th
+
+    -@admin_tabs_rev.each do |tab|
+      %tr{:class => ('opaque' if !tab.visible?)}
+        %td.text-string-md
+          =tab.name
+        %td.text-string-lg
+          =tab.heading
+        %td.text-string-sm
+          =link_to '<i class="fa fa-edit fa-lg image-link"></i>'.html_safe, edit_admin_tab_path(:id => tab.id), remote: true
+        %td.text-string-sm
+          -visibility = tab.visible == 1 ? true : false
+          =check_box_tag "#{tab.id}", '1', visibility, :class => 'switch'
+        %td.text-string-sm
+          =link_to '<i class="fa fa-navicon fa-lg image-link"></i>'.html_safe, admin_sections_path(:id => tab.id)
+        %td.text-string-sm
+          =link_to '<i class="fa fa-times-circle fa-lg image-link"></i>'.html_safe, {:action => 'delete_tab', :id => tab.id},  remote: true
+
+
+
+
+

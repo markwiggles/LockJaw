@@ -1,0 +1,33 @@
+.container.admin
+
+  .row.heading
+
+    %h2 about Updates
+
+    -# New Testimonial Link
+    =link_to (button_tag '<i class="fa fa-navicon"></i> New'.html_safe, class: 'btn btn-default btn-lg new-btn'),
+        new_admin_about_path, remote: true
+
+  .row
+    .col-lg-7
+      #about-content
+        -#  Show the current about in a sortable list
+        =render 'content'
+
+    -# Show the New/Edit form
+    .col-lg-5
+      .form-view.create-content
+
+
+
+
+:javascript
+
+  var ready = function () {
+
+  initialiseSortableList('#sortable-abouts','admin_abouts/update_list_order', 'admin_abouts/index')
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);

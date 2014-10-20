@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body>
+
+
+<h3>Below is a copy of the message received from the Ladderclampz website</h3>
+<hr>
+
+
+<p><%= @contact.message %></p>
+
+<br>
+
+<h4>Received from:</h4>
+<p><strong><%= "#{@contact.name}" %></strong></p>
+
+<p><%= @contact.email %></p>
+
+<br>
+<hr>
+<p><strong>Copy of mail sent:</strong></p>
+
+<%= image_tag @settings.image_url %>
+
+<h3><%= @settings.heading %></h3>
+
+<p><%= "#{@settings.greeting} #{@contact.name}" %></p>
+
+
+<p><%= @settings.body %></p>
+
+<br>
+
+<p><%= add_single_line_breaks @settings.signature %></p>
+
+
+</body>
+</html>

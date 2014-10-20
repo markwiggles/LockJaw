@@ -1,0 +1,22 @@
+
+
+-# The selected tab
+
+-# The content
+
+%ul#sortable-faqs.sortable-list.col-lg-12
+
+  -@admin_faqs.each do |faq|
+
+    %li{id: faq.id, :class => ('opaque' if !faq.visible?)}
+
+
+      %p.text-primary
+        =faq.question
+      %p.answer
+        =add_paragraph_breaks faq.answer
+
+
+      .edit-delete
+        =link_to '<i class="fa fa-edit fa-lg image-link"></i>'.html_safe, edit_admin_faq_path(:id => faq.id), remote: true
+        =link_to '<i class="fa fa-times-circle fa-lg image-link"></i>'.html_safe, {:action => 'delete', :id => faq.id},  remote: true

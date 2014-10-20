@@ -1,0 +1,26 @@
+%ul#image-slider
+
+  -# Load the images
+
+
+:javascript
+
+
+
+  var ready = function () {
+
+    $('#image-slider').empty();
+
+
+    // get the images and append them to the div, with callback to initialise the image slider
+          var photoset = '72157648179656437';
+          var container = '#image-slider';
+          var size = 'm';
+          var callback = initialiseImageSlider;
+          getFlickrImagesForSlider(photoset, container, size, callback)
+
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);

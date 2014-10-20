@@ -1,0 +1,47 @@
+// Place all the styles related to the contact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.contact-div {
+  display:inline-block;
+  height: 200px;
+  width: 350px;
+}
+
+#addresses {
+  margin-top: 20px;
+}
+
+#contact-form {
+  position: relative;
+  margin-top: -100px;
+  padding: 10px;
+  background-color: lighten(#d3d3d3,10%);
+  border-radius: 10px;
+
+
+  textarea, input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.1em;
+  }
+  textarea {
+    height: 40px;
+    width: 96%;
+    height: 55px;
+    display: inline-block;
+  }
+  input {
+    width: 46%;
+    display: inline-block;
+  }
+  input[type=submit] {
+    width: 200px;
+    float:right;
+    display: inline-block;
+    font-family: "FontAwesome";
+  }
+}
+
+

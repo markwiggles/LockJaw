@@ -1,0 +1,32 @@
+.main-content
+  =image_tag 'innovation_award.jpg', alt: 'innovation', class: 'award'
+
+
+  .row#addresses
+
+    -@contact_us.each do |contact|
+
+      .contact-div
+
+        -if contact.heading != nil && contact.heading != ''
+          %h2.text-primary
+            =contact.heading
+
+        -if contact.image_id != nil && contact.image_id != 'no_image'
+          =image_tag contact.image_url, class:'thumbnail blog-img', style: "float: #{contact.image_position}"
+
+        %address
+          =add_single_line_breaks contact.content
+
+  .row
+
+    -# todo Form mailer
+    #contact-form.col-lg-7.col-md-7.col-sm-7
+      =render 'contact_form'
+
+
+
+
+
+
+

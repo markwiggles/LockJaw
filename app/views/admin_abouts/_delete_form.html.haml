@@ -1,0 +1,18 @@
+
+%h3.alert-danger.short-msg.text-center Delete about - Are you sure?
+
+.form-sm
+
+  %u You are about to delete this about
+
+  %p
+    =truncate(@admin_about.heading, length: 50, omission: '......')
+
+  %p
+    =@admin_about.content
+
+  %br
+  %br
+
+  =button_to 'DELETE SECTION', {:action => 'destroy', :id => @admin_about.id},
+  :method => :delete, class: 'btn-default'

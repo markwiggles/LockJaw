@@ -1,0 +1,14 @@
+.main-content
+
+  -@about_us.each do |about|
+
+    %h2.text-primary
+      =about.heading
+    %hr
+
+    %p.lead
+      -if about.image_id != nil && about.image_id != 'no_image'
+        =image_tag about.image_url, class:'thumbnail blog-img', style: "float: #{about.image_position}"
+      =add_paragraph_breaks about.content
+
+

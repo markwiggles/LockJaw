@@ -1,0 +1,10 @@
+
+
+$('.sortable-list').remove();
+
+$('#testimonial-content').html("<%= j render :partial => 'testimonial_content' %>");
+
+
+
+// Call to admin function initialiseSortableList(listElement, urlPost, urlCallback)
+initialiseSortableList('#sortable-testimonials','admin_testimonials/update_list_order', 'admin_testimonials/testimonial_list');

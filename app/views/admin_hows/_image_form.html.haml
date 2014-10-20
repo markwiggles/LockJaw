@@ -1,0 +1,63 @@
+
+%h3 Update/Add/Delete Image
+
+.form-md
+
+  -logger.debug " ADMIN how #{@admin_how.id}"
+
+  =simple_form_for @admin_how, :url => {:action => 'change_image'}, remote: true do |f|
+
+    =f.input :id, :as => :hidden
+    =f.input :image_id, :as => :hidden, id: 'image_id'
+    =f.input :image_id_color, :as => :hidden, id: 'image_id-color'
+
+    -#%fieldset
+    -#  -image_size = 'admin_how[image_size]'
+    -#  -image_position= 'admin_how[image_position]'
+    -#  =render :partial => 'radio_list', :locals => {image_size_name: image_size, image_position_name: image_position,
+    -#  image_size: @admin_how.image_size, image_position: @admin_how.image_position }
+
+    %h4 Black and White Image
+    #form-gallery
+    %h4 Color Photo
+    #form-gallery2
+
+
+    =f.button :submit, 'Update How Page', class: 'btn-default'
+
+
+:javascript
+
+  var ready = function () {
+
+    // show the image gallery - b&w
+      var form_name = 'admin_how';
+      var photoset = '72157648368650158';
+      var element = '#form-gallery';
+      var size = 's';
+      var callback = selectImage;
+      var image_id_field = 'image_id';
+
+      getFlickrImages(form_name, photoset, element, size, callback, image_id_field);
+
+      // show the image gallery - color
+            var form_name = 'admin_how';
+            var photoset = '72157648179656437';
+            var element = '#form-gallery2';
+            var size = 's';
+            var callback = selectImage;
+            var image_id_field = 'image_id_color';
+
+            getFlickrImages(form_name, photoset, element, size, callback, image_id_field);
+
+
+
+      //initialise the form buttons
+      $('.btn').button();
+    };
+
+    $(document).ready(ready);
+    $(document).on('page:load', ready);
+
+
+

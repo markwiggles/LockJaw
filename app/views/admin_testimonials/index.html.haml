@@ -1,0 +1,35 @@
+.container.admin
+
+  .row.heading
+
+    %h2 Testimonial Updates
+
+    -# New Testimonial Link
+    =link_to (button_tag '<i class="fa fa-navicon"></i> New'.html_safe, class: 'btn btn-default btn-lg new-btn'),
+        new_admin_testimonial_path, remote: true
+
+  .row
+    .col-lg-7
+      #testimonial-content
+        -#  Show the current testimonials in a sortable list
+        =render 'testimonial_content'
+
+    -# Show the New/Edit form
+    .col-lg-5
+      .form-view.create-content
+
+
+
+
+:javascript
+
+  var ready = function () {
+
+  // Call to admin function initialiseSortableList(listElement, urlPost, urlCallback)
+  initialiseSortableList('#sortable-testimonials','admin_testimonials/update_list_order', 'admin_testimonials/testimonial_list');
+
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);

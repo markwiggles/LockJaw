@@ -1,0 +1,21 @@
+.main-content#blog-content
+
+  -@admin_tabs_visible.each do |tab|
+
+    .section.hide-elem{:id => tab.id}
+
+      %h3.text-primary
+        =tab.heading
+
+      -sections = AdminSection.find_tab_id_equal_to(tab.id).order(:position)
+
+      -sections.each do |section|
+
+        %h4{class: ('hide-elem' if section.sub_heading == '')}
+          =section.sub_heading
+        -if section.image_id != nil && section.image_id != 'no_image'
+          =image_tag section.image_url_blog, class:'thumbnail blog-img', style: "float: #{section.image_position_blog}"
+        %p.lead
+          =add_paragraph_breaks section.content
+
+        <hr>

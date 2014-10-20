@@ -1,0 +1,31 @@
+
+%h3 Edit Testimonial
+
+.container.form-md
+
+  =simple_form_for @admin_testimonial, :url => {:action => 'update'}, remote: true do |f|
+
+    =f.input :id, :as => :hidden
+
+    -# The switch button
+    =render partial: 'admin_shared/switch_form', locals: {f: f, model_attribute: @admin_testimonial, :param => 'admin_testimonial'}
+
+    =f.input :content,as: :text, autofocus: true, class: 'testimonial',:input_html => {:rows => 12, :cols => 54}
+    =f.input :signature, :required => true, class: 'testimonial'
+    %br
+    =f.button :submit, 'Update Testimonial', class: 'btn-default'
+
+
+:javascript
+
+  var ready = function () {
+
+
+    /*Call the custom jQuery method to initialise the switches
+     jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) */
+  $('.switch').initialiseSwitches(null,null);
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);

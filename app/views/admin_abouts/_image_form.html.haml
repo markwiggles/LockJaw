@@ -1,0 +1,52 @@
+
+%h3 Update/Add/Delete Image
+
+.form-md
+
+  -logger.debug " ADMIN about #{@admin_about.id}"
+
+  =simple_form_for @admin_about, :url => {:action => 'change_image'}, remote: true do |f|
+
+
+    -logger.debug "FORM ID #{f.input :id}"
+
+    =f.input :id, :as => :hidden
+    =f.input :image_id, :as => :hidden, id: 'image-id'
+
+    %fieldset
+      %legend
+      -image_size = 'admin_about[image_size]'
+      -image_position= 'admin_about[image_position]'
+      =render :partial => 'radio_list', :locals => {image_size_name: image_size, image_position_name: image_position,
+      image_size: @admin_about.image_size, image_position: @admin_about.image_position }
+
+
+
+    #form-gallery
+
+
+    =f.button :submit, 'Update About Us Page', class: 'btn-default'
+
+
+:javascript
+
+  var ready = function () {
+
+      // show the image gallery
+      var form_name = 'admin_about';
+      var photoset = '72157648761879412';
+      var element = '#form-gallery';
+      var size = 's';
+      var callback = selectImage;
+
+      getFlickrImages(form_name, photoset, element, size, callback);
+
+      //initialise the form buttons
+      $('.btn').button();
+    };
+
+    $(document).ready(ready);
+    $(document).on('page:load', ready);
+
+
+

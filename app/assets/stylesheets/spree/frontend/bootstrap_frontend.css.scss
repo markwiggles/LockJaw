@@ -1,0 +1,103 @@
+//Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
+
+
+$body-bg: rgba(9, 22, 33, 0.4) !default;
+
+$component-active-bg:       black !default;
+
+
+//** Background for the dropdown menu.
+$dropdown-bg:                    black !default;
+//** Dropdown menu `border-color`.
+//$dropdown-border:                rgba(0,0,0,.15) !default;
+////** Dropdown menu `border-color` **for IE8**.
+//$dropdown-fallback-border:       #ccc !default;
+////** Divider color for between dropdown items.
+//$dropdown-divider-bg:            #e5e5e5 !default;
+//
+////** Dropdown link text color.
+//$dropdown-link-color:            $gray-dark !default;
+////** Hover color for dropdown links.
+//$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
+////** Hover background for dropdown links.
+//$dropdown-link-hover-bg:         #f5f5f5 !default;
+//
+////** Active dropdown menu item text color.
+//$dropdown-link-active-color:     $component-active-color !default;
+////** Active dropdown menu item background color.
+//$dropdown-link-active-bg:        $component-active-bg !default;
+//
+////** Disabled dropdown menu item background color.
+//$dropdown-link-disabled-color:   $gray-light !default;
+//
+////** Text color for headers within dropdown menus.
+//$dropdown-header-color:          $gray-light !default;
+//
+////** Deprecated `$dropdown-caret-color` as of v3.1.0
+//$dropdown-caret-color:           #000 !default;
+
+$icon-font-path: "../../bootstrap/";
+@import "bootstrap";
+
+// -- Spree Custom Header and Footer ---------------------
+#spree-header {
+//  background: #1c5c92 asset-url('spree_header.jpg') center center;
+//  background-color: black;
+  background-size: cover;
+  margin-bottom: $line-height-computed;
+  #header {
+    background: black;//rgba(9, 22, 33, 0.4);
+    height: 101px;
+  }
+  #logo {
+    margin-top: 7px;
+    img {
+
+    }
+  }
+
+
+  .nav a {
+    color: #fff;
+    &:hover {
+      background: lighten(rgba(9, 22, 33, 0.4),60%);
+    }
+  }
+  .navbar {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+#spree-footer {
+  background: $gray-dark;
+  padding-top: $padding-base-horizontal;
+  margin-top: $line-height-computed;
+  color: #fff;
+}
+
+
+
+
+
+
+
+// -- Spree Layout Custom Rules -------------------------
+
+//TODO, bug #6
+.alert-error, .alert-registration_error { @extend .alert-danger; }
+.alert-alert { @extend .alert-info; }
+.alert-notice { @extend .alert-info; }
+
+.product-body {
+  height: 170px;
+}
+.progress-steps {
+  margin-top: $line-height-computed;
+}
+h1 {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,11 @@
+
+%h3.alert-danger.short-msg.text-center Delete Tab - Are you sure?
+
+.container.form-md
+
+  %p You are about to delete this tab and all sections
+  %h4 #{@admin_tab.name}
+
+
+  =button_to 'Delete Tab and All Sections', {:action => 'destroy', :id => @admin_tab.id},
+  :method => :delete, class: 'btn-default'

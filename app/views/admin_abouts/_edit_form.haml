@@ -1,0 +1,33 @@
+
+%h3 Edit about
+
+.container.form-md
+
+  =simple_form_for @admin_about, :url => {:action => 'update'}, remote: true do |f|
+
+    =f.input :id, :as => :hidden
+
+    -# The switch button
+    =render partial: 'admin_shared/switch_form', locals: {f: f, model_attribute: @admin_about, :param => 'admin_about'}
+
+    =f.input :heading, autofocus: true, class: 'about'
+    =f.input :content, as: :text, :required => true, class: 'about',:input_html => {:rows => 10, :cols => 54}
+    %br
+    =f.button :submit, 'Update about', class: 'btn-default'
+
+
+
+:javascript
+
+  var ready = function () {
+
+
+    /*Call the custom jQuery method to initialise the switches
+     jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) */
+  $('.switch').initialiseSwitches(null,null);
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+

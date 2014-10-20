@@ -1,0 +1,8 @@
+
+// Refresh the price-box view
+
+console.log('refreshing price view')
+
+$('#price-boxes-view').empty();
+$('#price-boxes-view').html("<%= j render :partial => 'price_boxes' %>");
+

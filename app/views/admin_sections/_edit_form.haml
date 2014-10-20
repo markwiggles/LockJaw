@@ -1,0 +1,33 @@
+
+%h3 Edit Section
+
+.container.form-md
+
+  =simple_form_for @admin_section, :url => {:action => 'update'}, remote: true do |f|
+
+
+    =f.input :id, :as => :hidden
+
+    -# The switch button
+    =render partial: 'admin_shared/switch_form', locals: {f: f, model_attribute: @admin_section, :param => 'admin_section'}
+
+    =f.input :sub_heading, autofocus: true
+    =f.input :content, as: :text, :required => true, class: 'section',:input_html => {:rows => 10, :cols => 54}
+    %br
+    =f.input :truncation, input_html: {style: 'width: 80px; margin-top: 0;'}, inline_label: 'Truncation'
+    =f.button :submit, 'Update Section', class: 'btn-default'
+
+
+:javascript
+
+  var ready = function () {
+
+
+    /*Call the custom jQuery method to initialise the switches
+     jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) */
+  $('.switch').initialiseSwitches(null,null);
+
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);

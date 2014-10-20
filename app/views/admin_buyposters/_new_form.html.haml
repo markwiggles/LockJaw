@@ -1,0 +1,10 @@
+
+%h3 Create New buyposter
+.container.form-md
+
+  =simple_form_for @admin_buyposter, :url => {:action => 'create'}, remote: true do |f|
+
+    =f.input :link, autofocus: true
+    =f.input :alt
+    %br
+    =f.button :submit, 'Create New Poster', class: 'btn-default'

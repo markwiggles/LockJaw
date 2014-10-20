@@ -1,0 +1,12 @@
+
+%h3 Create New Testimonial
+.container.form-md
+
+  =simple_form_for @admin_testimonial, :url => {:action => 'create_testimonial'}, remote: true do |f|
+
+    =f.input :content,as: :text, autofocus: true, class: 'testimonial',:input_html => {:rows => 12, :cols => 54}
+    =f.input :signature, :required => true, class: 'testimonial'
+    %br
+    =f.button :submit, 'Create New Testimonial', class: 'btn-default'
+
+

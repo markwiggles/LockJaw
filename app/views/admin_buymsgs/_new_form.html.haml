@@ -1,0 +1,11 @@
+
+%h3 Create New Buy Message
+.container.form-md
+
+  =simple_form_for @admin_buymsg, :url => {:action => 'create'}, remote: true do |f|
+
+    =f.input :message, autofocus: true, class: 'buymsg', default: 0
+    =f.input :letter_spacing, input_html: {style: 'width: 80px; margin-top: 0;'}, inline_label: 'Letter Spacing'
+
+    %br
+    =f.button :submit, 'Create New Buy Message', class: 'btn-default'

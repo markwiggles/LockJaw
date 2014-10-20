@@ -1,0 +1,24 @@
+
+.row.container
+
+  -# show the current and edited price box
+  #price-boxes-view
+    =render 'price_boxes'
+
+.row
+
+  -# The Sortable List showing all the messsages
+
+  %ul#sortable-buymsgs.sortable-list.col-lg-12
+    -@admin_buymsgs.each do |buymsg|
+
+      %li{id: buymsg.id, :class => ('opaque' if !buymsg.visible?)}
+
+        %h4
+          =buymsg.message
+
+        .edit-delete
+          =link_to '<i class="fa fa-edit fa-lg image-link"></i>'.html_safe, edit_admin_buymsg_path(:id => buymsg.id), remote: true
+          =link_to '<i class="fa fa-times-circle fa-lg image-link"></i>'.html_safe, {:action => 'delete', :id => buymsg.id}, remote: true
+
+        %hr

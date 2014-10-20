@@ -1,0 +1,58 @@
+
+%h3 Update/Add/Delete Image
+
+.form-md
+
+  -logger.debug " ADMIN SECTION #{@admin_section.id}"
+
+  =simple_form_for @admin_section, :url => {:action => 'change_image'}, remote: true do |f|
+
+
+    -logger.debug "FORM ID #{f.input :id}"
+
+    =f.input :id, :as => :hidden
+    =f.input :image_id, :as => :hidden, id: 'image-id'
+
+    %fieldset
+      %h4 Tab Section
+      -image_size = 'admin_section[image_size_tab]'
+      -image_position= 'admin_section[image_position_tab]'
+      =render :partial => 'radio_list', :locals => {image_size_name: image_size, image_position_name: image_position,
+      image_size: @admin_section.image_size_tab, image_position: @admin_section.image_position_tab }
+
+    %fieldset
+      %h4 Blog Section
+      -image_size = 'admin_section[image_size_blog]'
+      -image_position= 'admin_section[image_position_blog]'
+      =render :partial => 'radio_list', :locals => {image_size_name: image_size, image_position_name: image_position,
+            image_size: @admin_section.image_size_blog, image_position: @admin_section.image_position_blog }
+
+
+    #form-gallery
+
+
+    =f.button :submit, 'Update Section', class: 'btn-default'
+
+
+:javascript
+
+  var ready = function () {
+
+    // show the image gallery
+      var form_name = 'admin_section';
+      var photoset = '72157648179656437';
+      var element = '#form-gallery';
+      var size = 's';
+      var callback = selectImage;
+
+      getFlickrImages(form_name, photoset, element, size, callback);
+
+      //initialise the form buttons
+      $('.btn').button();
+    };
+
+    $(document).ready(ready);
+    $(document).on('page:load', ready);
+
+
+

@@ -1,0 +1,9 @@
+.col-lg-4
+  -# The Price Box showing the current message (visible)
+  %h4 Current Buy Message
+  =render :partial => 'price_box', locals: {spree_price: @spree_price, buymsg: @buymsg_current}
+
+.col-lg-4{:class => ('opaque' if !@buymsg_first.visible?) }
+  %h4 Editing Buy Message
+  -# The Price Box showing the first message (visible or not)
+  =render :partial => 'price_box', locals: {spree_price: @spree_price, buymsg: @buymsg_first}

@@ -1,0 +1,34 @@
+.main-content#how
+
+  %h2.text-primary
+    This is How the LockJaw Works
+
+
+  #instructions
+
+    -@admin_hows_visible.each do |how|
+      .row.step
+        .col-lg-8.step-bw
+          %h3.text-primary
+            =how.heading
+
+          -if how.image_id != nil && how.image_id != 'no_image'
+            =image_tag how.image_url, class:'thumbnail', style: "float: #{how.image_position}"
+
+          %p.lead
+            =add_paragraph_breaks how.content
+
+        .col-lg-4
+
+          -#  image for step
+          -if how.image_id != nil && how.image_id != 'no_image'
+            =image_tag how.image_url_color, class:'thumbnail step-color'
+
+      %hr
+
+
+
+
+
+
+

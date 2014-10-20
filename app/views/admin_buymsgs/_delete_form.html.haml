@@ -1,0 +1,16 @@
+
+%h3.alert-danger.short-msg.text-center Delete FAQ - Are you sure?
+
+.form-sm
+
+  %u You are about to delete this Buy Message
+
+  %h3
+    =@admin_buymsg.message
+
+
+  %br
+  %br
+
+  =button_to 'DELETE MESSAGE', {:action => 'destroy', :id => @admin_buymsg.id},
+  :method => :delete, class: 'btn-default'

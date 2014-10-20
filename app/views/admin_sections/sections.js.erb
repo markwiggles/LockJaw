@@ -1,0 +1,11 @@
+
+
+/* Clear the list and re-render with the updated data
+ * re-initialise the list, passing the arguments for the sortable list callback - the urlPost, and the urlCallback */
+
+
+$('.sortable-list').empty();
+$('.sortable-list').html("<%= j render :partial => 'sections' %>");
+
+
+initialiseSortableList('.sortable-list','admin_sections/update_section_order', 'admin_sections/sections');

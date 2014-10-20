@@ -1,0 +1,18 @@
+
+%h3.alert-danger.short-msg.text-center Delete buyposter - Are you sure?
+
+.form-sm
+
+  %u You are buyposter to delete this buyposter
+
+  %p
+    =truncate(@admin_buyposter.heading, length: 50, omission: '......')
+
+  %p
+    =@admin_buyposter.content
+
+  %br
+  %br
+
+  =button_to 'DELETE SECTION', {:action => 'destroy', :id => @admin_buyposter.id},
+  :method => :delete, class: 'btn-default'

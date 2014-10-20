@@ -1,0 +1,12 @@
+
+
+
+$('.sortable-list').remove();
+
+$('#buyposter-content').html("<%= j render :partial => 'admin_buyposters/content' %>");
+
+
+// Call to admin function initialiseSortableList(listElement, urlPost, urlCallback)
+initialiseSortableList('#sortable-buyposters','admin_buyposters/update_list_order', 'admin_buyposters/index');
+
+$('.switch').initialiseSwitches('admin_buyposters/update_visibility',null);

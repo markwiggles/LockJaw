@@ -1,0 +1,7 @@
+module AdminTabsHelper
+
+
+
+
+
+end

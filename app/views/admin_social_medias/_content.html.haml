@@ -1,0 +1,24 @@
+
+
+-# The content
+
+%ul#sortable-social_medias.sortable-list.col-lg-12
+
+  -@admin_social_medias.each do |social_media|
+
+    %li{id: social_media.id, :class => ('opaque' if !social_media.visible?)}
+
+      %p.text-primary
+        =social_media.link
+      %p
+        =social_media.alt
+        -if social_media.image_id != nil && social_media.image_id != 'no_image'
+          =image_tag social_media.original_image_url, class:'thumbnail blog-img', style: "float: right;"
+
+
+      .edit-delete
+        =link_to '<i class="fa fa-edit fa-lg image-link"></i>'.html_safe, edit_admin_social_media_path(:id => social_media.id), remote: true
+        =link_to '<i class="fa fa-times-circle fa-lg image-link"></i>'.html_safe, {:action => 'delete', :id => social_media.id},  remote: true
+        =link_to '<i class="fa fa-file-photo-o fa-lg image-link"></i>'.html_safe, edit_image_admin_social_media_path(:id => social_media.id ), :id => social_media.id, remote: true
+      %br
+      %hr

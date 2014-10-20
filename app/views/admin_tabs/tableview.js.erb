@@ -1,0 +1,12 @@
+
+
+console.log('running sortable js');
+
+$('.table-view').empty();
+$('.table-view').html("<%= j render :partial => 'table' %>");
+
+/*Call the custom jQuery method to initialise the switches
+ jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) */
+$('.switch').initialiseSwitches('admin_tabs/update_tab_visibility','admin_tabs/sortable');
+
+$('.tab-view').initialiseSortableTabs();

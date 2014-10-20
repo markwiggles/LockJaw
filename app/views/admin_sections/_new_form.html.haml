@@ -1,0 +1,13 @@
+
+%h3 Create New Section
+.container.form-md
+
+  =simple_form_for @admin_section, :url => {:action => 'create_section'}, remote: true do |f|
+
+    =f.input :admin_tab_id, :as => :hidden
+    =f.input :sub_heading, autofocus: true, class: 'section'
+    =f.input :content,as: :text, :required => true, class: 'section',:input_html => {:rows => 12, :cols => 54}
+    %br
+    =f.button :submit, 'Create New Section', class: 'btn-default'
+
+

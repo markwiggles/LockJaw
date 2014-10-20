@@ -1,0 +1,14 @@
+.main-content#faq-content
+
+  %h2.text-primary Some Frequently Asked Questions
+  %hr
+
+  -@admin_faqs.each do |faq|
+
+    .panel.panel-default
+      .panel-heading
+        %h4.text-primary
+          =faq.question
+      .panel-body
+        %p.lead
+          =add_paragraph_breaks faq.answer

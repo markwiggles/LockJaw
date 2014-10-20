@@ -1,0 +1,28 @@
+
+
+
+
+<div class="btn-group" data-toggle="buttons">
+  <p>Image Size</p>
+  <label class="btn btn-primary <%= image_size == 'small' ? 'active' : '' %>">
+    <input type="radio" name="<%= image_size_name %>" value="small" <%= image_size == 'small' ? 'checked' : '' %>> sm
+  </label>
+  <label class="btn btn-primary <%= image_size == 'medium' ? 'active' : '' %>">
+    <input type="radio" name="<%= image_size_name %>" value="medium" <%= image_size == 'medium' ? 'checked' : '' %>> md
+  </label>
+  <label class="btn btn-primary <%= image_size == 'large' ? 'active' : '' %>">
+    <input type="radio" name="<%= image_size_name %>" value="large" <%= image_size == 'large' ? 'checked' : '' %>> lg
+  </label>
+</div>
+
+<div class="btn-group" data-toggle="buttons">
+  <p>Image Position</p>
+  <label class="btn btn-primary <%= image_position == 'left' ? 'active' : '' %>">
+    <input type="radio" name="<%= image_position_name %>" value="left" <%= image_position == 'left' ? 'checked' : '' %>>left
+  </label>
+  <label class="btn btn-primary <%= image_position == 'right' ? 'active' : '' %>">
+    <input type="radio" name="<%= image_position_name %>" value="right" <%= image_position == 'right' ? 'checked' : '' %>>right
+  </label>
+</div>
+
+

@@ -1,0 +1,10 @@
+
+%h3 Create New FAQ
+.container.form-md
+
+  =simple_form_for @admin_faq, :url => {:action => 'create'}, remote: true do |f|
+
+    =f.input :question, autofocus: true, class: 'faq'
+    =f.input :answer, as: :text, :required => true, class: 'faq',:input_html => {:rows => 10, :cols => 54}
+    %br
+    =f.button :submit, 'Create New FAQ', class: 'btn-default'

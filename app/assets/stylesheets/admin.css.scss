@@ -1,0 +1,287 @@
+
+#admin-nav {
+  width: 710px;
+}
+
+.admin {
+  color: #fff;
+  height: 600px;
+
+  .form-sm {
+    width: 420px;
+  }
+  .form-md {
+    width: 400px;
+  }
+
+  h2 {
+    display: inline-block;
+  }
+
+  #helpers {
+    padding: 0px 20px 20px 30px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+  }
+
+  .new-btn {
+    margin-bottom: 20px;
+    float: right;
+  }
+
+  input {
+    color: darkslategray;
+  }
+  input[type=submit] {
+    color: #f5f5f5;
+  }
+  input {
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 400px;
+  }
+  .help-inline {
+    margin-left: 10px;
+  }
+
+  table {
+    width: auto;
+  }
+
+  .text-string-sm {
+    width: 120px;
+    text-align: center;
+  }
+
+  .text-string-md {
+    width: 230px;
+  }
+  .text-string-lg {
+    width: 480px;
+  }
+  .integer-bool {
+    text-align: center;
+  }
+  .fa {
+    margin-top: 6px;
+  }
+  .fa-times-circle {
+    color: darkred;
+  }
+
+  .tab-view {
+    float: left;
+    width: 650px;
+    height: 90px;
+    border-radius: 5px;
+    a:hover {
+      cursor: move !important;
+    }
+  }
+
+  .form-view {
+    position: relative;
+    float: left;
+    width: 400px;
+    margin-right: 50px;
+    margin-top: -20px;
+    .bootstrap-switch {
+      float: right;
+      margin-top: -20px;
+    }
+    .close-x {
+      position: absolute;
+      top: 4%;
+      left: 100%;
+      width: 30px;
+    }
+  }
+
+  .height-sm {
+    height: 250px;
+  }
+
+  .height-md {
+    height: 250px;
+  }
+  .height-lg {
+    height: 350px;
+  }
+
+  .short-msg {
+    padding: 10px;
+    width: 420px;
+  }
+
+  .button:hover {
+    cursor: pointer;
+  }
+
+
+  .section input, textarea {
+    padding: 10px;
+    color: darkslategrey;
+  }
+  .create-content {
+    margin-right: 200px;
+  }
+
+  .sortable-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sortable-list li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    &:hover {
+      cursor: move;
+    }
+
+    .edit-delete {
+      position: absolute;
+      left: 100%;
+      top: 10%;
+      .fa {
+        margin-bottom: 10px;
+      }
+      input {
+        display: block;
+      }
+    }
+  }
+  .ui-sortable-helper {
+    background-color: #d3d3d3;
+    opacity: 0.9;
+  }
+  .fa {
+    z-index: 1000;
+  }
+  .fa-edit, .fa-navicon {
+    color: lighten(black, 20%);
+  }
+
+  .news-tabs {
+    width: 650px;
+  }
+
+
+  #testimonial-content, #faq-content, #about-content, #contact-content, #how-content  {
+    margin-right: 50px;
+  }
+//  #sortable-testimonials, #sortable-faqs, #sortable-abouts, #sortable-contacts, #sortable-hows {
+  .sortable-list {
+    padding: 10px 25px 10px 10px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: black;
+  }
+
+  #testimonial-content li, #faq-content li, #about-content li, #contact-content li, #how-content li  {
+    padding: 10px 20px 0px 10px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    .quote {
+      text-align: justify;
+    }
+  }
+  .signature {
+    text-align: right;
+    margin-right: 50px;
+  }
+
+  .control-group {
+    margin-top: 20px;
+  }
+
+  .bootstrap-switch {
+    height: 20px !important;
+  }
+
+  .bootstrap-switch-mini {
+    width: 50px !important;
+  }
+  .bootstrap-switch-label {
+    padding: 0;
+  }
+
+  #form-gallery, #form-gallery2 {
+    margin: 0px auto 20px auto;
+    width: 400px;
+    height: 160px;
+    overflow: auto;
+    img {
+      display: inline;
+      padding: 5px;
+      margin: 2px;
+      height: 75px;
+      width: 75px;
+      border: 3px solid #d3d3d3;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+  }
+
+  .btn-group {
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+
+  fieldset {
+    width: 170px;
+    display: inline-block;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    padding: 0px 0px 10px 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    h4 {
+      border-bottom: 1px solid #f5f5f5;
+      line-height: 1.6em;
+    }
+    .btn-group {
+      margin: 0 0 10px 0;
+    }
+
+  }
+  .admin_section_truncation {
+    margin-top: -10px;
+    label, input {
+      float: left;
+      margin: 0 0 10px 0;
+    }
+    label {
+      margin-top: 5px;
+      margin-right: 10px;
+    }
+  }
+  .opaque {
+    opacity: 0.5;
+  }
+}
+
+
+//GLOBAL
+.controls, .control-group {
+  position: relative;
+}
+
+.help-inline {
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  color: red;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+
+
+
+

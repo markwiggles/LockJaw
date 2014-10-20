@@ -1,0 +1,39 @@
+
+
+-# Create the tab content
+
+/*Create the sortable tabs with the list id as the admin_tab id */
+#tabs.news-tabs
+  %ul
+    -@admin_tabs_visible.each do |tab|
+      %li{:id => tab.id}
+        =link_to "#{tab.name}", "#tabs-#{tab.id}"
+
+
+
+  -# Loop through the admin tabs, and write the heading in each tab div
+  -# Loop through the sections for the tab, and write the sub_heading and content
+
+  -@admin_tabs_visible.each do |tab|
+    .tab-content{:id => "tabs-#{tab.id}"}
+
+      %h3.text-primary
+        =tab.heading
+
+      -sections = AdminSection.find_tab_id_equal_to(tab.id).order(:position)
+
+      -sections.each do |section|
+
+
+        %h4{class: ('hide-elem' if section.sub_heading == '')}
+          =add_html_helpers(section.sub_heading)
+
+        -if section.image_id != nil && section.image_id != 'no_image'
+          =image_tag section.image_url_tab, class:'thumbnail blog-img', style: "float: #{section.image_position_tab};"
+
+        %p
+          =truncate(add_paragraph_breaks(section.content), length: section.truncation,
+          omission: "#{link_to '........Read More', blog_path(tab.id), class: 'read-more'}", :escape => false)
+
+
+

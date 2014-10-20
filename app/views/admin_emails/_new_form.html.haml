@@ -1,0 +1,14 @@
+
+%h3 Create New Email Settings
+.container.form-md
+
+  =simple_form_for @admin_email, :url => {:action => 'create'}, remote: true do |f|
+
+    =f.input :id, as: :hidden
+    =f.input :subject, autofocus: true
+    =f.input :heading
+    =f.input :greeting
+    =f.input :body, as: :text, :required => true,:input_html => {:rows => 3, :cols => 54}
+    =f.input :signature,as: :text,:input_html =>{:rows => 2, :cols => 20}
+    %br
+    =f.button :submit, 'Create Email Settings', class: 'btn-default'

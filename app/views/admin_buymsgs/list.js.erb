@@ -1,0 +1,17 @@
+
+
+
+$('.sortable-list').remove();
+
+$('#buymsg-content').html("<%= j render :partial => 'admin_buymsgs/content' %>");
+
+
+// Call to admin js function )
+var listElement ='#sortable-buymsgs';
+var urlPost ='admin_buymsgs/update_list_order';
+var urlCallback = 'admin_buymsgs/price_boxes'; //refreshes the price boxes
+
+initialiseSortableList(listElement, urlPost, urlCallback);
+
+$('.switch').initialiseSwitches('admin_buymsgs/update_visibility',null);
+
