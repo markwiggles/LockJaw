@@ -1,6 +1,8 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
+ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+
 set :application, 'JessicaSarah'
 set :repo_url, 'https://github.com/markwiggles/LockJaw.git'
 
@@ -8,7 +10,7 @@ set :repo_url, 'https://github.com/markwiggles/LockJaw.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/home/markwigg/webapps/shoptest'
+set :deploy_to, '/home/markwigg/webapps/lockjaw'
 
 # Default value for :scm is :git
 set :scm, :git

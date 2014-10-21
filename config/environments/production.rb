@@ -26,8 +26,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       :address => 'smtp.webfaction.com',
       :port => 587,
-      :domain => 'markwigg.webfactional.com',
-      :user_name => 'markwigg@web463.webfaction.com',
+      :domain => 'ladderclampz.markwigg.webfactional.com',
+      :user_name => 'ladderclampz@web463.webfaction.com',
       :password => ENV['EMAIL_PASSWORD'],
       :authentication => :plain,
       :enable_starttls_auto => true
