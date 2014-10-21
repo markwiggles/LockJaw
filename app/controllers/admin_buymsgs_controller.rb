@@ -84,6 +84,10 @@ class AdminBuymsgsController < ApplicationController
   # # REFRESH THE PRICE-BOXES VIEW
 
   def price_boxes
+    @admin_buymsgs = AdminBuymsg.sorted_by_position_all
+    @buymsg_current = AdminBuymsg.sorted_by_position_visible.first
+    @buymsg_first = AdminBuymsg.sorted_by_position_all.first
+    @spree_price = Spree::Price.find(1).amount
 
     respond_to do |format|
       format.html { redirect_to admin_buymsg_path }

@@ -1,0 +1,7 @@
+
+
+// Refresh the view
+
+$('#social_media-view').empty();
+$('#social_media-view').html("<%= j render :partial => 'shared/social_media',
+locals: {social_medias: @social_medias_visible}%>");

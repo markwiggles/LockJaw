@@ -9,6 +9,10 @@
         new_admin_social_media_path, remote: true
 
   .row
+    #social_media-view
+      =render partial: 'shared/social_media', locals: {social_medias: @social_medias_visible}
+
+  .row
     .col-lg-7
       #social_media-content
         -#  Show the current social_media in a sortable list
@@ -25,8 +29,10 @@
 
   var ready = function () {
 
-
-  initialiseSortableList('#sortable-social_medias','admin_social_medias/update_list_order', 'admin_social_medias/index')
+  var listElement = '#sortable-social_medias';
+  var urlPost = 'admin_social_medias/update_list_order';
+  var urlCallback = 'admin_social_medias/view';
+  initialiseSortableList(listElement, urlPost, urlCallback);
 
   };
 

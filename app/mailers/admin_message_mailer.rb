@@ -2,7 +2,7 @@ class AdminMessageMailer < ActionMailer::Base
 
   add_template_helper ApplicationHelper
 
-  default from: 'mail@markwigg.com'
+  default from: 'mail@ladderclampz.markwigg.webfactional.com'
 
 
   def send_mail_to_contact(contact)
@@ -23,7 +23,7 @@ class AdminMessageMailer < ActionMailer::Base
 
     # assign the settings, to be used in the contact_mailer
     @settings = AdminEmail.first
-    mail(to: 'markbwigglesworth02@gmail.com', subject: 'Website Message')
+    mail(to: 'mail@ladderclampz.markwigg.webfactional.com', subject: 'Website Message')
 
   end
 

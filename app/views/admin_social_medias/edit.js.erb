@@ -5,3 +5,8 @@ $('.form-view').empty();
 $('.form-view').html("<%= j render :partial => 'admin_social_medias/edit_form' %>");
 
 addCloseIcon();
+
+// Refresh the view
+var path = 'admin_social_medias/view';
+var id = null;
+sendAjaxCall(path, id);

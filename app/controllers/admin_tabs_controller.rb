@@ -85,9 +85,6 @@ class AdminTabsController < ApplicationController
     end
   end
 
-
-
-
   # -------------------------------------------------------------------------
   # DELETE
   def delete_tab

@@ -4,7 +4,8 @@ class AdminSocialMediasController < ApplicationController
 
 
   def index
-    @admin_social_medias = AdminSocialMedia.sorted_by_position_all
+    @social_medias = AdminSocialMedia.sorted_by_position_all
+    @social_medias_visible = AdminSocialMedia.sorted_by_position_visible
   end
 
 
@@ -87,7 +88,18 @@ class AdminSocialMediasController < ApplicationController
   # REFRESH THE LIST
 
   def list
-    @admin_social_medias = AdminSocialMedia.sorted_by_position_all
+    @social_medias = AdminSocialMedia.sorted_by_position_all
+    respond_to do |format|
+      format.html { redirect_to admin_social_medias_path }
+      format.js
+    end
+  end
+
+  # -------------------------------------------------------------------------
+  # REFRESH THE VIEW
+
+  def view
+    @social_medias_visible = AdminSocialMedia.sorted_by_position_visible
     respond_to do |format|
       format.html { redirect_to admin_social_medias_path }
       format.js

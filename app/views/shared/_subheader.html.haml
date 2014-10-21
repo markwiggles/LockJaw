@@ -20,4 +20,4 @@
   =button_tag '<i class="fa fa-play"></i> Watch Video'.html_safe, class: 'btn btn-default btn-lg', id: 'watch_video'
 
 
-=render partial: 'shared/social_media'
+=render partial: 'shared/social_media', locals: {social_medias: @social_medias}

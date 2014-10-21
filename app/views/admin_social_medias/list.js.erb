@@ -1,12 +1,15 @@
 
 
-
 $('.sortable-list').remove();
 
 $('#social_media-content').html("<%= j render :partial => 'admin_social_medias/content' %>");
 
 
-// Call to admin function initialiseSortableList(listElement, urlPost, urlCallback)
-initialiseSortableList('#sortable-social_medias','admin_social_medias/update_list_order', 'admin_social_medias/index');
+var listElement = '#sortable-social_medias';
+var urlPost = 'admin_social_medias/update_list_order';
+var urlCallback = 'admin_social_medias/view';
+initialiseSortableList(listElement, urlPost, urlCallback);
+
 
 $('.switch').initialiseSwitches('admin_social_medias/update_visibility',null);
+

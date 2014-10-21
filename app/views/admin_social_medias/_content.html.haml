@@ -4,7 +4,7 @@
 
 %ul#sortable-social_medias.sortable-list.col-lg-12
 
-  -@admin_social_medias.each do |social_media|
+  -@social_medias.each do |social_media|
 
     %li{id: social_media.id, :class => ('opaque' if !social_media.visible?)}
 
@@ -13,7 +13,7 @@
       %p
         =social_media.alt
         -if social_media.image_id != nil && social_media.image_id != 'no_image'
-          =image_tag social_media.original_image_url, class:'thumbnail blog-img', style: "float: right;"
+          =image_tag social_media.original_image_url, class:'thumbnail blog-img', style: 'float: right;'
 
 
       .edit-delete

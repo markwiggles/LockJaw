@@ -1,5 +1,5 @@
 .social-media
   %p Find us on
 
-  -@social_medias.each do |social_media|
+  -social_medias.each do |social_media|
     =link_to (image_tag "#{social_media.original_image_url}", alt: "#{social_media.alt}"), social_media.link, target: '_blank', class: 'image-link'
