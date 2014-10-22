@@ -1,5 +1,7 @@
 class AdminMessageMailer < ActionMailer::Base
 
+
+
   add_template_helper ApplicationHelper
 
   default from: 'mail@ladderclampz.markwigg.webfactional.com'

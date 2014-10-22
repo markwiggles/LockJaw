@@ -3,6 +3,9 @@ class AdminTabsController < ApplicationController
   layout 'admin'
 
   def index
+
+    @current_page = 'Blog'
+
     @admin_tabs = AdminTab.all
     @admin_tabs_rev = AdminTab.sorted_rev
     @admin_tabs_visible = AdminTab.visible

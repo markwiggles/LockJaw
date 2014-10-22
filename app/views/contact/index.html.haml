@@ -22,11 +22,20 @@
 
     -# todo Form mailer
     #contact-form.col-lg-7.col-md-7.col-sm-7
-      =render 'contact_form'
 
 
 
+:javascript
 
+    var path = 'admin_messages/new';
+    var id = null;
+    sendAjaxCall(path, id);
+
+    $('.btn').on('click', function() {
+
+    console.log('clicked');
+
+    })
 
 
 

@@ -4,6 +4,9 @@ class AdminContactsController < ApplicationController
 
 
   def index
+
+    @current_page = 'Contact Us'
+
     @admin_contacts = AdminContact.sorted_by_position_all
   end
 

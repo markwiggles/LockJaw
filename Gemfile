@@ -13,6 +13,9 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-ui-themes'
 
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.0.0'
+
 gem 'font-awesome-rails'
 gem 'turbolinks'
 
@@ -24,9 +27,12 @@ gem 'therubyracer',  platforms: :ruby
 gem 'simple-navigation-bootstrap'
 gem 'simple_form'
 
+gem 'honeypot-captcha'
+
 gem 'haml-rails'
 
 gem 'rest_client'
+
 
 
 gem 'spring',        group: :development

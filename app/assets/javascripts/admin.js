@@ -45,8 +45,6 @@ function updateVisibility(id, visible, urlPost, urlCallback) {
 // Make an ajax call via the controller action, then re-initialise the div
 function sendAjaxCall(path, id) {
 
-    console.log('sending call to ' + path);
-
     $.ajax({
         type: 'POST',
         url: path,

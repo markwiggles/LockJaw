@@ -16,32 +16,47 @@
 #contact-form {
   position: relative;
   margin-top: -100px;
+  margin-left: 10px;
   padding: 10px;
   background-color: lighten(#d3d3d3,10%);
   border-radius: 10px;
 
+  .control-group {
+    margin-left: 0;
+    display: inline-block;
+  }
 
+.fa {
+  position: absolute;
+  top:30%;
+  left:45%;
+  color:#428bca;
+}
   textarea, input {
     padding: 10px;
-    margin: 10px;
+    margin: 10px 10px 10px 15px;
     font-size: 1.1em;
   }
-  textarea {
-    height: 40px;
-    width: 96%;
-    height: 55px;
-    display: inline-block;
-  }
   input {
-    width: 46%;
-    display: inline-block;
+    width: 280px;
   }
+  textarea {
+    width: 585px;
+  }
+
   input[type=submit] {
     width: 200px;
-    float:right;
+    margin-right: 10px;
     display: inline-block;
     font-family: "FontAwesome";
+    &:link {
+      background-color: red;
+    }
   }
+
+ .help-inline {
+   left: 90%;
+ }
 }
 
 

@@ -16,6 +16,9 @@ Bundler.require(*Rails.groups)
 # update environment variables with constants from custom YML file
 ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
 
+
+
+
 module LockJaw
   class Application < Rails::Application
     

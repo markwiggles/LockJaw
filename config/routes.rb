@@ -77,9 +77,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :contact do
+  resources :admin_messages do
     member do
-      post 'create_message'
+      post 'new'
+      post 'create'
     end
   end
 

@@ -1,0 +1,20 @@
+
+//render the form
+
+$('#contact-form').empty();
+
+$('#contact-form').html("<%= j render :partial => 'contact_form' %>");
+
+
+
+
+$('.btn').on('click', function() {
+
+    $(this).css({color:'#428bca'});
+
+    $('#contact-form').append($('<i>').addClass('fa fa-spinner fa-spin fa-5x'));
+
+})
+
+
+

@@ -5,6 +5,9 @@ class AdminBuymsgsController < ApplicationController
 
 
   def index
+
+    @current_page = 'Buy Msg'
+
     @admin_buymsgs = AdminBuymsg.sorted_by_position_all
     @buymsg_current = AdminBuymsg.sorted_by_position_visible.first
     @buymsg_first = AdminBuymsg.sorted_by_position_all.first

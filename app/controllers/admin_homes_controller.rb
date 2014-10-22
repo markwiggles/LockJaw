@@ -4,6 +4,9 @@ class AdminHomesController < ApplicationController
 
 
   def index
+
+    @current_page = 'Home'
+
     # @admin_homes = AdminHome.sorted_by_position_all
   end
 

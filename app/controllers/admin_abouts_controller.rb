@@ -4,6 +4,9 @@ class AdminAboutsController < ApplicationController
 
 
   def index
+
+    @current_page = 'About Us'
+
     @admin_abouts = AdminAbout.sorted_by_position_all
   end
 

@@ -5,6 +5,9 @@ class AdminFaqsController < ApplicationController
 
 
   def index
+
+    @current_page = 'FAQ'
+
     @admin_faqs = AdminFaq.sorted_by_position_all
   end
 

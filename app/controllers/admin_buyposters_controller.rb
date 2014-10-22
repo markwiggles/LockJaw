@@ -4,6 +4,9 @@ class AdminBuypostersController < ApplicationController
 
 
   def index
+
+    @current_page = 'Poster'
+
     @admin_buyposters = AdminBuyposter.sorted_by_position_all
   end
 

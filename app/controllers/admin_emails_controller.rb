@@ -4,6 +4,9 @@ class AdminEmailsController < ApplicationController
 
 
   def index
+
+    @current_page = 'Email'
+
     @admin_emails = AdminEmail.sorted_by_position_all
   end
 

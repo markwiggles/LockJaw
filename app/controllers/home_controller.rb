@@ -3,6 +3,9 @@ class HomeController < ApplicationController
   layout 'default'
 
   def index
+
+    @current_page = 'Home'
+
     @admin_tabs_visible = AdminTab.visible
     @testimonials = AdminTestimonial.sorted_by_position_visible
     @spree_price = Spree::Price.find(1).amount

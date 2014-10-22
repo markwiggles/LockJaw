@@ -1,0 +1,15 @@
+
+
+//get another form
+
+var path = 'admin_messages/new';
+var id = null;
+sendAjaxCall(path, id);
+
+
+//Add the flash message
+$('#flash-messages').append($('<div>').addClass('alert alert-success')
+        .html("message sent")
+        .append($('<a>')
+                .attr('data-dismiss','alert')
+                .addClass('close').html('x')));

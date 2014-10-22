@@ -4,6 +4,9 @@ class AdminSocialMediasController < ApplicationController
 
 
   def index
+
+    @current_page = 'Social Media'
+
     @social_medias = AdminSocialMedia.sorted_by_position_all
     @social_medias_visible = AdminSocialMedia.sorted_by_position_visible
   end

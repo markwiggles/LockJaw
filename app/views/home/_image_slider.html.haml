@@ -9,7 +9,9 @@
     =image_tag 'image4.png'
 
 #poster
-  -#=image_tag @poster.image_url, alt: @poster.alt
+  -if @poster != nil
+    -if @poster.image_id != 'no_image' && @poster.image_id != nil
+      =image_tag @poster.image_url, alt: @poster.alt
 
 
 

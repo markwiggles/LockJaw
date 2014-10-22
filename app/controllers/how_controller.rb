@@ -2,6 +2,8 @@ class HowController < ApplicationController
 
   def index
 
+    @current_page = 'How-it-Works'
+
     @admin_hows_visible = AdminHow.sorted_by_position_visible
 
   end

@@ -2,6 +2,8 @@ class BlogsController < ApplicationController
 
   def index
 
+    @current_page = 'Blog'
+
     @admin_tabs_visible = AdminTab.visible
 
   end

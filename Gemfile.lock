@@ -215,6 +215,7 @@ GEM
       railties (>= 4.0.1)
     highline (1.6.21)
     hike (1.2.3)
+    honeypot-captcha (0.0.2)
     htmlentities (4.3.2)
     httparty (0.13.1)
       json (~> 1.8)
@@ -375,8 +376,10 @@ DEPENDENCIES
   capistrano (~> 3.2.1)
   capistrano-bundler (~> 1.1.2)
   capistrano-rails
+  coffee-rails (~> 4.0.0)
   font-awesome-rails
   haml-rails
+  honeypot-captcha
   jquery-rails
   jquery-ui-rails
   jquery-ui-themes

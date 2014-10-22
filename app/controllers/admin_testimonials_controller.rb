@@ -4,6 +4,9 @@ class AdminTestimonialsController < ApplicationController
 
 
   def index
+
+    @current_page = 'Testimonials'
+
     @admin_testimonials = AdminTestimonial.sorted_by_position_all
   end
 

@@ -4,6 +4,8 @@ class AdminHowsController < ApplicationController
 
 
   def index
+    @current_page = 'How-It-Works'
+
     @admin_hows = AdminHow.sorted_by_position_all
   end
 
