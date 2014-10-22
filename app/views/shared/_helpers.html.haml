@@ -1,0 +1,50 @@
+#helper-list
+
+  %h4.text-primary#helper-icon
+    Format Helpers &#xf0d7;
+
+  .row
+    .helper-type
+      %p
+        \\n (creates new Line)
+      %p
+        s-p &nbsp (creates one space)
+
+    .helper-type
+      %p
+        %strong
+          b- bold -b
+      %p
+        %i
+          i- italic -i
+      %p
+        .lead
+          l- Larger -l
+      %p
+        %u
+          u- underline -u
+    .helper-type
+      %p
+        .text-primary
+          c1- Color me -c1
+      %p
+        .text-color-red
+          c2- Color me -c2
+      %p
+        .text-success
+          c3- Color me -c3
+
+:javascript
+
+          $('#helper-icon').on('mouseover', function() {
+
+          $('#helper-list').css({height: 'auto'});
+
+          });
+
+          $('#helper-list').on('mouseleave', function() {
+
+          $('#helper-list').css({height: '40px'});
+
+          });
+

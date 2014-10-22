@@ -35,6 +35,10 @@ module ApplicationHelper
 
     content = content.gsub('c1-', '<span class="text-primary">').html_safe
     content = content.gsub('-c1', '</span>').html_safe
+    content = content.gsub('c2-', '<span class="text-color-red">').html_safe
+    content = content.gsub('-c2', '</span>').html_safe
+    content = content.gsub('c3-', '<span class="text-success">').html_safe
+    content = content.gsub('-c3', '</span>').html_safe
   end
 
 
