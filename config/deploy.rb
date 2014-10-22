@@ -3,7 +3,7 @@ lock '3.2.1'
 
 ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
 
-set :application, 'JessicaSarah'
+set :application, 'LockJaw'
 set :repo_url, 'https://github.com/markwiggles/LockJaw.git'
 
 # Default branch is :master

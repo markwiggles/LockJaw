@@ -4,7 +4,7 @@ SimpleNavigation::Configuration.run do |navigation|
   navigation.items do |primary|
 
     primary.item :admin, 'HOME', '/admin_homes' do |home|
-      home.item :admin_home, '&#xf128; &nbsp; Helpers', admin_homes_path
+      home.item :admin_home, '&#xf015; &nbsp; Home', admin_homes_path
       home.item :admin_buymsg, '&#xf155; &nbsp;Buy Message', admin_buymsgs_path
       home.item :admin_buyposter, '&#xf0f6 &nbsp;Promo Poster', admin_buyposters_path
       home.item :admin_social_media, '&#xf082; &nbsp;Social Media', admin_social_medias_path
