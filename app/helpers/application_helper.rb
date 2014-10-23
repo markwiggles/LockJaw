@@ -2,6 +2,8 @@ module ApplicationHelper
 
   require 'rest_client'
 
+  include Spree::Core::ControllerHelpers
+
 
   def add_paragraph_breaks(content)
     content = content.gsub('\n', '</p><p>').html_safe
@@ -85,11 +87,39 @@ module ApplicationHelper
 
   def change_image_url_to_thumbnail(image_url)
 
-    image_url = image_url.gsub('_m', '_s' )
+    image_url = image_url.gsub('_m', '_s')
     image_url = image_url.gsub('_q', '_s')
     image_url.gsub('_n', '_s')
 
   end
 
+  def require_login
+    if spree_current_user
+      unless spree_current_user.has_spree_role?('admin')
+        redirect_to spree_login_path
+      end
+    else
+      redirect_to spree_login_path
+
+    end
+
+  end
+
 
 end
+
+
+# @spree_admin_users = Spree::User.admin.inspect
+#
+# @spree_current_user = spree_current_user.has_spree_role?('admin')
+#
+#
+# logger.debug "SPREE USER #{@spree_current_user}"
+#
+# @spree_admin_users = Spree::User.admin
+#
+# @spree_admin_users.each do |user|
+#
+#   logger.debug user.login
+#
+# end

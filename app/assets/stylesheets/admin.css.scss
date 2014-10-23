@@ -87,8 +87,8 @@
     .close-x {
       position: absolute;
       top: 4%;
-      left: 100%;
-      width: 30px;
+      left: 102%;
+      width: 20px;
     }
   }
 
@@ -111,7 +111,6 @@
   .button:hover {
     cursor: pointer;
   }
-
 
   .section input, textarea {
     padding: 10px;
@@ -163,11 +162,10 @@
     width: 650px;
   }
 
-
-  #testimonial-content, #faq-content, #about-content, #contact-content, #how-content  {
+  #testimonial-content, #faq-content, #about-content, #contact-content, #how-content {
     margin-right: 50px;
   }
-//  #sortable-testimonials, #sortable-faqs, #sortable-abouts, #sortable-contacts, #sortable-hows {
+  //  #sortable-testimonials, #sortable-faqs, #sortable-abouts, #sortable-contacts, #sortable-hows {
   .sortable-list {
     padding: 10px 25px 10px 10px;
     border: 1px solid #f5f5f5;
@@ -176,7 +174,7 @@
     color: black;
   }
 
-  #testimonial-content li, #faq-content li, #about-content li, #contact-content li, #how-content li  {
+  #testimonial-content li, #faq-content li, #about-content li, #contact-content li, #how-content li {
     padding: 10px 20px 0px 10px;
     width: 100%;
     border-bottom: 1px solid lightgrey;
@@ -260,7 +258,6 @@
   }
 }
 
-
 //GLOBAL
 .controls, .control-group {
   position: relative;
@@ -296,14 +293,20 @@
     float: left;
     text-align: left;
     margin: 30px;
+    p, .lead{
+      margin: 0;
+      padding: 0;
+    }
+
   }
   h4 {
     margin: 0;
     font-family: "FontAwesome", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  &:hover {
-    cursor: pointer;
+    &:hover {
+      cursor: pointer;
 
-  }
+    }
+
   }
 
 }

@@ -1,15 +1,17 @@
 
-%h3.alert-danger.short-msg.text-center Delete social_media - Are you sure?
+%h3.alert-danger.short-msg.text-center Delete Link - Are you sure?
 
 .form-sm
 
-  %u You are social_media to delete this social_media
+  %u You are about to delete this social media link
+
+  %p
+    =@admin_social_media.alt
 
   %p
     =truncate(@admin_social_media.link, length: 50, omission: '......')
 
-  %p
-    =@admin_social_media.alt
+
 
   %br
   %br

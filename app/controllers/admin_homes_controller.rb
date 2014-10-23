@@ -1,5 +1,10 @@
 class AdminHomesController < ApplicationController
 
+  include ApplicationHelper
+
+  before_filter :require_login
+
+
   layout 'admin'
 
 
@@ -7,7 +12,6 @@ class AdminHomesController < ApplicationController
 
     @current_page = 'Home'
 
-    # @admin_homes = AdminHome.sorted_by_position_all
   end
 
 

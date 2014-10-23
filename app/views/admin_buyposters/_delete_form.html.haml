@@ -1,18 +1,20 @@
 
-%h3.alert-danger.short-msg.text-center Delete buyposter - Are you sure?
+%h3.alert-danger.short-msg.text-center Delete Poster - Are you sure?
 
 .form-sm
 
-  %u You are buyposter to delete this buyposter
+  %u You are buyposter to delete this poster
 
   %p
-    =truncate(@admin_buyposter.heading, length: 50, omission: '......')
+    =@admin_buyposter.alt
 
   %p
-    =@admin_buyposter.content
+    -if @admin_buyposter.image_id != nil && @admin_buyposter.image_id != 'no_image'
+      =image_tag change_image_url_to_thumbnail(@admin_buyposter.image_url), class:'thumbnail blog-img' #, style: "float: #{buyposter.image_position};"
+
 
   %br
   %br
 
-  =button_to 'DELETE SECTION', {:action => 'destroy', :id => @admin_buyposter.id},
+  =button_to 'DELETE POSTER', {:action => 'destroy', :id => @admin_buyposter.id},
   :method => :delete, class: 'btn-default'

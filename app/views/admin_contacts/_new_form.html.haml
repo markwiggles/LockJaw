@@ -1,5 +1,5 @@
 
-%h3 Create New contact
+%h3 Create New Contact Area
 .container.form-md
 
   =simple_form_for @admin_contact, :url => {:action => 'create'}, remote: true do |f|
@@ -7,4 +7,4 @@
     =f.input :heading, autofocus: true, class: 'contact'
     =f.input :content, as: :text, :required => true, class: 'contact',:input_html => {:rows => 10, :cols => 54}
     %br
-    =f.button :submit, 'Create New contact', class: 'btn-default'
+    =f.button :submit, 'Create New Contact Area', class: 'btn-default'

@@ -200,7 +200,7 @@ function selectImage(form_name, container, image_id_field, original_secret_field
 }
 
 function addCloseIcon() {
-    $('.form-view').append($('<img>').attr('src', 'assets/close-x-grey.png').addClass('close-x image-link'));
+    $('.form-view').append($('<img>').attr('src', 'assets/black-cross-md.png').addClass('close-x image-link'));
 
     $('.close-x').on('click touchstart', function () {
         $('.form-view').empty();

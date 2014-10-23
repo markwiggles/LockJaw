@@ -1,5 +1,5 @@
 
-%h3 Edit email
+%h3 Edit Email Message
 
 .container.form-md
 
@@ -18,9 +18,9 @@
       =f.input :heading
       =f.input :greeting
       =f.input :body, as: :text, :required => true,:input_html => {:rows => 3, :cols => 54}
-      =f.input :signature,as: :text,:input_html =>{:rows => 2, :cols => 20}
+      =f.input :signature,as: :text,:input_html =>{:rows => 3, :cols => 20}
       %br
-      =f.button :submit, 'Update Email Settings', class: 'btn-default'
+      =f.button :submit, 'Update Email Message', class: 'btn-default'
 
 
 

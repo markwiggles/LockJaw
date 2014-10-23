@@ -1,5 +1,5 @@
 
-%h3.alert-danger.short-msg.text-center Delete email - Are you sure?
+%h3.alert-danger.short-msg.text-center Delete Message - Are you sure?
 
 .form-sm
 
@@ -12,10 +12,10 @@
     =truncate(@admin_email.body, length: 50, omission: '......')
 
   %p
-    =@admin_email.signature
+    =add_single_line_breaks @admin_email.signature
 
   %br
   %br
 
-  =button_to 'DELETE EMAIL', {:action => 'destroy', :id => @admin_email.id},
+  =button_to 'DELETE EMAIL MESSAGE', {:action => 'destroy', :id => @admin_email.id},
   :method => :delete, class: 'btn-default'

@@ -1,5 +1,5 @@
 
-%h3 Create New Email Settings
+%h3 Create New Email Message
 .container.form-md
 
   =simple_form_for @admin_email, :url => {:action => 'create'}, remote: true do |f|
@@ -9,6 +9,6 @@
     =f.input :heading
     =f.input :greeting
     =f.input :body, as: :text, :required => true,:input_html => {:rows => 3, :cols => 54}
-    =f.input :signature,as: :text,:input_html =>{:rows => 2, :cols => 20}
+    =f.input :signature,as: :text,:input_html =>{:rows => 3, :cols => 20}
     %br
-    =f.button :submit, 'Create Email Settings', class: 'btn-default'
+    =f.button :submit, 'Create Email Message', class: 'btn-default'
