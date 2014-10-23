@@ -280,24 +280,23 @@
   position: absolute;
   background-color: black;
   color: #f5f5f5;
-  z-index: 5000;
-  width: auto;
-  height: 40px;
+  z-index: 100;
+  width: 190px;
+  height: 20px;
   overflow: hidden;
   text-align: center;
   top: 0;
-  left: 30%;
+  left: 50%;
   border-radius: 5px;
   .helper-type {
     width: 180px;
     float: left;
     text-align: left;
-    margin: 30px;
+    margin: 10px 0px 10px 40px;
     p, .lead{
       margin: 0;
       padding: 0;
     }
-
   }
   h4 {
     margin: 0;
@@ -306,9 +305,19 @@
       cursor: pointer;
 
     }
-
   }
 
+}
+
+
+
+.quick-links {
+
+  background-color: #f5f5f5;
+  width: 170px;
+  height: auto;
+  padding: 5px 15px 15px 15px;
+  border-radius: 5px;
 }
 
 

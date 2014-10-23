@@ -5,11 +5,18 @@ class ApplicationController < ActionController::Base
 
   layout 'default'
 
-  before_filter 'assign_names'
+  before_filter 'assign_names', 'assign_admin_user'
 
   def assign_names
 
     @website_name = 'Ladderclampz'
+
+  end
+
+  def assign_admin_user
+
+    @admin_user = spree_current_user
+
 
   end
 

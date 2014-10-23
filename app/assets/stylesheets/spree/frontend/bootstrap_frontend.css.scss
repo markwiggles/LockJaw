@@ -5,6 +5,15 @@ $body-bg: rgba(9, 22, 33, 0.4) !default;
 
 $component-active-bg:       black !default;
 
+.logged-in-as {
+  z-index: 60000;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  color: #428bca;
+  font-size: 0.9em;
+}
+
 
 //** Background for the dropdown menu.
 $dropdown-bg:                    black !default;
