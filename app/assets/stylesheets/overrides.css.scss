@@ -14,6 +14,7 @@ $zindex_slider: 100;
 .navbar-brand {
   img {
     margin-left: 15px;
+    margin-top: 10px;
   }
 }
 
@@ -34,7 +35,7 @@ $zindex_slider: 100;
 
 .navbar .navbar-collapse {
   text-align: center;
-  min-height: 110px;
+  min-height: 120px;
 }
 
 #main-nav,#admin-nav {
@@ -293,4 +294,13 @@ footer {
 
 .text-color-red {
   color: #cc0000;
+}
+
+.logged-in-as {
+  z-index: 60000;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  color: #428bca;
+  font-size: 0.9em;
 }

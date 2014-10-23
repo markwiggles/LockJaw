@@ -102,7 +102,12 @@ module ApplicationHelper
       redirect_to spree_login_path
 
     end
+  end
 
+  def spree_admin_user
+    if spree_current_user
+        spree_current_user
+    end
   end
 
 
