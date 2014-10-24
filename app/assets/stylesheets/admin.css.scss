@@ -314,10 +314,15 @@
 .quick-links {
   margin-top: 40px;
   background-color: #f5f5f5;
-  width: 170px;
+  width: 240px;
   height: auto;
   padding: 5px 15px 15px 15px;
   border-radius: 5px;
+  p {
+    font-size: 1.7em;
+    margin: 15px;
+    font-family: "FontAwesome", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  }
 }
 
 

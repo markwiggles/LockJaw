@@ -2,7 +2,7 @@
 
   .row.heading
 
-    %h2 Administration
+    %h2 Website: Content Management
 
     %br
     %h4
@@ -10,12 +10,15 @@
     .quick-links
       %h3.text-primary
         Quick Links
-      %li
-        =link_to 'Tabs/Blog', admin_tabs_path
-      %li
-        =link_to 'Buy Message', admin_buymsgs_path
-      %li
-        =link_to 'Email Message', admin_emails_path
+
+      %p
+        =link_to '&#xf07a; &nbsp Spree Admin'.html_safe, '/shop/admin'
+      %p
+        =link_to '&#xf0db; &nbsp;  Tabs/Blog'.html_safe, admin_tabs_path
+      %p
+        =link_to '&#xf155; &nbsp; Buy Message'.html_safe, admin_buymsgs_path
+      %p
+        =link_to '&#xf1d9; &nbsp; Email Message'.html_safe, admin_emails_path
 
 
 
