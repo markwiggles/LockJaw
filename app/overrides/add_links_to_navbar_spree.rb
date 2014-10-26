@@ -12,7 +12,7 @@ Deface::Override.new({:virtual_path => 'spree/shared/_header',
 
                       :name => 'add_links',
                       :insert_after => "erb[loud]:contains('spree/shared/nav_bar')",
-                      :text => "<div id='shop-nav-bar' class=''>
+                      :text => "<div id='shop-nav-bar' class='navbar-collapse collapse'>
 <ul class='nav navbar-nav' data-hook>#{home_link}
 <% if spree_current_user
 if spree_current_user.has_spree_role?('admin')  %>" "#{cms_link} #{admin_link}<% end %><% end %></ul></div>"
