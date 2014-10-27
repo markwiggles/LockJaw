@@ -5,7 +5,7 @@
 
 .contact-div {
   display:inline-block;
-  height: 200px;
+  height: auto;
   width: 350px;
 }
 
@@ -41,7 +41,7 @@
     width: 280px;
   }
   textarea {
-    width: 585px;
+    width: 580px;
   }
 
   input[type=submit] {
@@ -59,4 +59,55 @@
  }
 }
 
+// MEDIA QUERIES____________________________________________________
 
+/*******************************************************************/
+
+@media (max-width: $screen-xs-max) {
+
+  #contact-form {
+    margin-top: 10px;
+    textarea {
+      width: 280px;
+    }
+  }
+
+}
+/*******************************************************************/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+  #contact-form {
+    margin-top: 10px;
+    textarea {
+      width: 280px;
+    }
+  }
+
+
+}
+
+/*******************************************************************/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+  #spree-shop-nav {
+    margin-top: 0px;
+  }
+
+  #contact-form {
+    margin-top: 10px;
+    textarea {
+      width: 280px;
+    }
+  }
+
+}
+
+/*******************************************************************/
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+}
+
+/*******************************************************************/

@@ -1,9 +1,8 @@
 //Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
 
-
 $body-bg: rgba(9, 22, 33, 0.4) !default;
 
-$component-active-bg:       black !default;
+$component-active-bg: black !default;
 
 .logged-in-as {
   z-index: 60000;
@@ -14,19 +13,20 @@ $component-active-bg:       black !default;
   font-size: 0.9em;
 }
 
-
 //** Background for the dropdown menu.
-$dropdown-bg:                    black !default;
+$dropdown-bg: black !default;
 
 $icon-font-path: "../../bootstrap/";
 @import "bootstrap";
 
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
-//  background: #1c5c92 asset-url('spree_header.jpg') center center;
-//  background-color: black;
+  //  background: #1c5c92 asset-url('spree_header.jpg') center center;
+  //  background-color: black;
+
   background-size: cover;
   margin-bottom: $line-height-computed;
+
   #header {
     background: black;
     height: 120px;
@@ -36,13 +36,15 @@ $icon-font-path: "../../bootstrap/";
     height: 120px;
   }
 
-
   #top-nav-bar {
     z-index: 60000;
     position: absolute;
     top: 0;
     left: 75%;
   }
+
+  /****************************************************************/
+  // MAIN MENU
 
   #spree-shop-nav {
     width: 280px;
@@ -64,9 +66,6 @@ $icon-font-path: "../../bootstrap/";
     }
   }
 
-
-
-
   .navbar-brand {
     img {
       margin-left: 15px;
@@ -74,12 +73,10 @@ $icon-font-path: "../../bootstrap/";
     }
   }
 
-
-
   .nav a {
     color: #fff;
     &:hover {
-      background: lighten(rgba(9, 22, 33, 0.4),60%);
+      background: lighten(rgba(9, 22, 33, 0.4), 60%);
     }
   }
   .navbar {
@@ -88,9 +85,6 @@ $icon-font-path: "../../bootstrap/";
   }
 }
 
-
-
-
 #spree-footer {
   background: $gray-dark;
   padding-top: $padding-base-horizontal;
@@ -98,53 +92,48 @@ $icon-font-path: "../../bootstrap/";
   color: #fff;
 }
 
-
-
-
-
-
-
 // -- Spree Layout Custom Rules -------------------------
 
 //TODO, bug #6
-.alert-error, .alert-registration_error { @extend .alert-danger; }
-.alert-alert { @extend .alert-info; }
-.alert-notice { @extend .alert-info; }
+.alert-error, .alert-registration_error {
+  @extend .alert-danger;
+}
+
+.alert-alert {
+  @extend .alert-info;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
 
 .product-body {
   height: 170px;
 }
+
 .progress-steps {
   margin-top: $line-height-computed;
 }
+
 h1 {
   margin-bottom: 30px;
 }
 
-
 // MEDIA QUERIES____________________________________________________
-
-
-$small: 100px;
-$medium: 200px;
-$large: 300px;
 
 /*******************************************************************/
 
 @media (max-width: $screen-xs-max) {
 
   #spree-shop-nav {
-    margin-top: 0px;
+    margin-top: 0px !important;
   }
 }
 
 /*******************************************************************/
 /* Small devices (tablets, 768px and up) */
-   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
-     #spree-shop-nav {
-       margin-top: 0px;
-     }
 
 }
 
@@ -152,13 +141,15 @@ $large: 300px;
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 
+  #spree-shop-nav {
+    margin-top: 0px;
+  }
 
 }
 
 /*******************************************************************/
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
-
 
 }
 
