@@ -8,7 +8,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :testimonials, 'TESTIMONIALS', '/testimonials'
     primary.item :faq, 'FAQ', '/faq'
     primary.item :about, 'ABOUT US', '/about-us'
-    primary.item :contact, 'CONTACT US', '/contact-us'
+    primary.item :contact, 'CONTACT', '/contact-us'
     primary.item :blogs, 'BLOG', '/blogs'
 
 

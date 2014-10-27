@@ -3,6 +3,23 @@
 $zindex_button: 200;
 $zindex_slider: 100;
 
+.storefront {
+  padding-top: 130px;
+}
+
+.text-color-red {
+  color: #cc0000;
+}
+
+.logged-in-as {
+  z-index: 60000;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  color: #428bca;
+  font-size: 0.9em;
+}
+
 .main-content {
   height: 500px;
   background-color: #fff;
@@ -12,6 +29,7 @@ $zindex_slider: 100;
 }
 
 .navbar-brand {
+  height: auto;
   img {
     margin-left: 15px;
     margin-top: 10px;
@@ -19,7 +37,8 @@ $zindex_slider: 100;
 }
 
 #main-nav {
-  width: 715px;
+  width: 700px;
+  margin-top: 50px;
 }
 
 #admin-nav {
@@ -27,7 +46,11 @@ $zindex_slider: 100;
   margin-top: 50px;
 }
 
-.navbar #main-nav, .navbar #admin-nav {
+.navbar-fixed-top {
+  min-height: 120px;
+}
+
+.navbar #main-nav, .navbar #admin-nav, .navbar #spree-shop-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
@@ -41,8 +64,7 @@ $zindex_slider: 100;
   }
 }
 
-
-#main-nav,#admin-nav {
+#main-nav, #admin-nav, #spree-shop-nav {
   a {
     color: #fff;
   }
@@ -51,10 +73,10 @@ $zindex_slider: 100;
     color: #fff;
   }
   a:hover {
-    background-color: lighten(rgba(9, 22, 33, 0.4),60%);
+    background-color: lighten(rgba(9, 22, 33, 0.4), 60%);
   }
   .active {
-    background-color: darken(#A9A9A9,20%);
+    background-color: darken(#A9A9A9, 20%);
   }
 }
 
@@ -73,10 +95,11 @@ input[type=submit] {
   }
 }
 
-
 .award {
-  display: inline-block;
   border-radius: 5px;
+  display: inline-block;
+  width: 99%;
+  margin: 10px auto;
 }
 
 .nav-buttons {
@@ -97,7 +120,7 @@ input[type=submit] {
 
 .social-media {
   float: left;
-  width: 400px;
+  width: 180px;
   margin: 10px 10px 10px 10px;
   img {
     height: 35px;
@@ -119,6 +142,7 @@ input[type=submit] {
 #price-box-wrapper {
   display: inline-block;
   margin-bottom: 10px;
+  margin-right: 10px;
   background-color: #fff;
   border-radius: 5px;
   width: auto;
@@ -200,7 +224,7 @@ footer {
   float: left;
   background-color: #ffffff;
   border-radius: 5px;
-  width: 480px;
+  width: 420px;
   height: 460px;
   margin-left: 10px;
 }
@@ -251,60 +275,130 @@ footer {
   background-color: transparent;
 }
 
-// MEDIA QUERIES
 
-@media screen and (max-width: 1200px) {
+// MEDIA QUERIES____________________________________________________
 
+
+$small: 100px;
+$medium: 200px;
+$large: 300px;
+
+/*******************************************************************/
+
+@media (max-width: $screen-xs-max) {
+
+  .main-content {
+    margin-top: 0px;
+  }
+
+  #poster img {
+    height: $small;
+    width: $small;
+  }
+  #price-box-wrapper {
+    margin-top: 10px;
+  }
   #testimonial-slider {
     margin-left: 0;
     margin-top: 20px;
   }
-  #price-box-wrapper {
-    margin-top: 10px;
-  }
+
 }
 
-@media screen and (min-width: 990px) {
+/*******************************************************************/
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
+  .navbar-fixed-top {
+    height: 180px;
+  }
   #main-nav {
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  .main-content {
     margin-top: 50px;
   }
-  .award {
-    margin-top: 5px;
+
+  #poster img {
+    height: $medium;;
+    width: $medium;
   }
   #price-box-wrapper {
     margin-top: 10px;
   }
+  #testimonial-slider {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
-@media screen and (max-width: 990px) {
+/*******************************************************************/
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 
-  .award {
-    margin-top: 60px;
+  #main-nav {
+    margin-left: 10px;
+  }
+  .main-content {
+    margin-top: 0px;
   }
 
-}
-
-@media screen and (max-width: 768px) {
-
-  .award {
+  #poster img {
+    height: $medium;
+    width: $medium;
+  }
+  #price-box-wrapper {
     margin-top: 10px;
   }
+  #testimonial-slider {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
 }
 
-.storefront {
-  padding-top: 130px;
+/*******************************************************************/
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+  #poster img {
+    height: $large;
+    width: $large;
+  }
+
 }
 
-.text-color-red {
-  color: #cc0000;
-}
+/*******************************************************************/
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min !default;
 
-.logged-in-as {
-  z-index: 60000;
-  position: absolute;
-  top: 0;
-  left: 3%;
-  color: #428bca;
-  font-size: 0.9em;
-}
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop: $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;

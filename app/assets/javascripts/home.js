@@ -67,7 +67,7 @@ function onYouTubeIframeAPIReady() {
     // certain methods like getCurrentTime
 
 
-    console.log("YT ready");
+    $('#ytplayer').addClass('embed-responsive-item')
 
     if (!window.YT || window.ytplayer) {
         return;
