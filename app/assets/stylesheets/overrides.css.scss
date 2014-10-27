@@ -287,6 +287,11 @@ $large: 300px;
 
 @media (max-width: $screen-xs-max) {
 
+  #main-nav {
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+
   .main-content {
     margin-top: 0px;
   }
@@ -355,7 +360,6 @@ $large: 300px;
     margin-left: 0;
     margin-top: 20px;
   }
-
 }
 
 /*******************************************************************/

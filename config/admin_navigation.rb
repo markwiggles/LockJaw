@@ -14,7 +14,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :admin_testimonials, 'TESTIMONIALS', '/admin_testimonials'
     primary.item :admin_faq, 'FAQ', '/admin_faqs'
     primary.item :admin_about, 'ABOUT US', '/admin_abouts'
-    primary.item :admin_contact, 'CONTACT US', '/admin_contacts' do |contact|
+    primary.item :admin_contact, 'CONTACT', '/admin_contacts' do |contact|
       contact.item :page_update, '&#xf0e0; &nbsp; Page Updates','/admin_contacts'
       contact.item :admin_email, '&#xf1d9; &nbsp; Email Settings', admin_emails_path
     end
