@@ -43,14 +43,16 @@ function initialiseImageSliders() {
 
 function displayVideo() {
     $('.overlay').show();
-    $('.absolute').show();
+    $('#video-outer').show();
     ytplayer.playVideo();
 }
 function closeVideo() {
     $('.overlay').hide();
-    $('.absolute').hide();
+    $('#video-outer').hide();
     ytplayer.stopVideo();
 }
+
+/* YOUTUBE VIDEO ***************************************/
 
 //Create the youtube player
 var ytplayer = null;
@@ -66,12 +68,12 @@ function onYouTubeIframeAPIReady() {
     // is already created - because you will be missing
     // certain methods like getCurrentTime
 
-
-    $('#ytplayer').addClass('embed-responsive-item')
+    $('#ytplayer').addClass('embed-responsive-item');
 
     if (!window.YT || window.ytplayer) {
         return;
     }
+
     ytplayer = new YT.Player('ytplayer', {
         height: '315',
         width: '560',
