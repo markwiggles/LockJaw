@@ -1,9 +1,7 @@
 
-%h3 Select Image
+%h3 Select Image:  #{@admin_how.heading}
 
 .form-md
-
-  -logger.debug " ADMIN how #{@admin_how.id}"
 
   =simple_form_for @admin_how, :url => {:action => 'change_image'}, remote: true do |f|
 
@@ -11,11 +9,6 @@
     =f.input :image_id, :as => :hidden, id: 'image_id'
     =f.input :image_id_color, :as => :hidden, id: 'image_id-color'
 
-    -#%fieldset
-    -#  -image_size = 'admin_how[image_size]'
-    -#  -image_position= 'admin_how[image_position]'
-    -#  =render :partial => 'radio_list', :locals => {image_size_name: image_size, image_position_name: image_position,
-    -#  image_size: @admin_how.image_size, image_position: @admin_how.image_position }
 
     %h4 Black and White Image
     #form-gallery
