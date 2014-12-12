@@ -51,7 +51,7 @@ function sendAjaxCall(path, id) {
         dataType: 'script',
         data: {id: id},
         success: function () {
-            console.log('ajax call to ' + path + ' was successful');//for testing
+            //console.log('ajax call to ' + path + ' was successful');//for testing
         }
     }); //end ajax
 }
@@ -101,8 +101,6 @@ jQuery.fn.initialiseSortableTabs = function () {
 // Create a jQuery method to initialise the switches
 jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) {
 
-    console.log(urlPost + ", " + urlCallback);
-
     $.fn.bootstrapSwitch.defaults.size = 'mini';
     $.fn.bootstrapSwitch.defaults.onText = 'Show';
     $.fn.bootstrapSwitch.defaults.offText = 'Hide';
@@ -118,6 +116,12 @@ jQuery.fn.initialiseSwitches = function (urlPost, urlCallback) {
     }
     return this;
 }
+
+
+/* Call Flickr to obtain images based on the name of te photoset.
+*  When done, append the images to the container
+*  - run the callback to select the image
+* */
 
 function getFlickrImages(form_name, photoset, container, size, callback, image_id_field, original_secret_field) {
 
@@ -137,8 +141,6 @@ function getFlickrImages(form_name, photoset, container, size, callback, image_i
 
         var parsedFile = $.parseJSON($.parseJSON(result));
         var photos = parsedFile.photoset.photo;
-
-        console.log(photos)
 
         var baseUrl, imageId;
 
@@ -161,6 +163,7 @@ function getFlickrImages(form_name, photoset, container, size, callback, image_i
                 .attr('alt', photo.originalsecret)
                 .appendTo($(container));
         });
+
         //run the callback e.g. selectImage
         callback != null ? callback(form_name, container, image_id_field, original_secret_field) : '';
     });
@@ -176,6 +179,7 @@ function selectImage(form_name, container, image_id_field, original_secret_field
 
     //show which pic is currently selected (if any)
     var currentPicId = $('#' + form_name + '_' + image_id_field).val();
+
     //make this jquery safe by replacing period with escaped backslashes
     currentPicId = currentPicId.replace(/\./g, '\\.');
 

@@ -41,11 +41,12 @@
     // show the image gallery
       var form_name = 'admin_section';
       var photoset = '72157648179656437';
-      var element = '#form-gallery';
+      var container = '#form-gallery';
       var size = 's';
       var callback = selectImage;
+      var image_id_field = 'image_id';
 
-      getFlickrImages(form_name, photoset, element, size, callback);
+      getFlickrImages(form_name, photoset, container, size, callback, image_id_field);
 
       //initialise the form buttons
       $('.btn').button();

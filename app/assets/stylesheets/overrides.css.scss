@@ -3,6 +3,21 @@
 $zindex_button: 200;
 $zindex_slider: 100;
 
+$image-bg: '/assets/house.jpg';
+
+.bg-image {
+  background-image: url($image-bg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+  /*Add the browser prefixed CSS first:*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .storefront {
   padding-top: 130px;
 }
@@ -189,9 +204,15 @@ input[type=submit] {
   }
 }
 
+.image-link {
+  opacity: 0.9;
+  transition: all 0.3s ease-out;
+}
+
 .image-link:hover {
-  opacity: 0.5;
+  opacity: 1.0;
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 //------------------------------------

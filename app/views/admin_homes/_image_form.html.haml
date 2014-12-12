@@ -33,8 +33,10 @@
       var element = '#form-gallery';
       var size = 's';
       var callback = selectImage;
+      var image_id_field = 'image_id';
 
-      getFlickrImages(form_name, photoset, element, size, callback);
+
+      getFlickrImages(form_name, photoset, element, size, callback, image_id_field);
 
       //initialise the form buttons
       $('.btn').button();
