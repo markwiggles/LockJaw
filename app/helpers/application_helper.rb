@@ -80,7 +80,7 @@ module ApplicationHelper
   def dim_if_not_currently_visible(attribute)
 
     if !attribute.visible?
-      "class ='opaque'"
+      'opaque'
     end
 
   end
@@ -100,7 +100,6 @@ module ApplicationHelper
       end
     else
       redirect_to spree_login_path
-
     end
   end
 
@@ -109,8 +108,6 @@ module ApplicationHelper
         spree_current_user
     end
   end
-
-
 end
 
 

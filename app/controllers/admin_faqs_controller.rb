@@ -3,11 +3,8 @@ class AdminFaqsController < ApplicationController
 
   layout 'admin'
 
-
   def index
-
     @current_page = 'FAQ'
-
     @admin_faqs = AdminFaq.sorted_by_position_all
   end
 
@@ -80,8 +77,8 @@ class AdminFaqsController < ApplicationController
 
   # -------------------------------------------------------------------------
   # DELETE
-  def delete
 
+  def delete
     @admin_faq = AdminFaq.find params[:id]
   end
 
