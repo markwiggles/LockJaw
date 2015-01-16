@@ -1,4 +1,4 @@
-%html.bg-image(lang="en")
+%html(lang="en")
   %head
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
@@ -19,11 +19,12 @@
 
 
   %body.storefront
-  =render 'shared/header'
+  %header
+    =render 'shared/header2'
+  .main-body.bg-image
+    .container#main-content
+      =yield
 
-  .container
-    =yield
 
-  .container
-    %footer
-      %p &copy; Ladder Clampz. All Rights Reserved.
+  %footer
+    %p &copy; Ladder Clampz. All Rights Reserved.

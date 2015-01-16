@@ -3,9 +3,22 @@
 $zindex_button: 200;
 $zindex_slider: 100;
 
-$image-bg: '/assets/house.jpg';
+$bg_color: whitesmoke;
+$text_color: #428bca;
+
+$image-bg: '/assets/home_image.png';
+
+header {
+  height: 120px;
+}
+
+.main-body {
+
+}
+
 
 .bg-image {
+  //background: $bg_color;
   background-image: url($image-bg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -18,8 +31,14 @@ $image-bg: '/assets/house.jpg';
   background-size: cover;
 }
 
+.navbar-inverse {
+  background-color: $bg_color;
+  border: none;
+}
+
+
 .storefront {
-  padding-top: 130px;
+
 }
 
 .text-color-red {
@@ -47,7 +66,8 @@ $image-bg: '/assets/house.jpg';
   height: auto;
   img {
     margin-left: 15px;
-    margin-top: 10px;
+    margin-top: 5px;
+    border: 1px solid black;
   }
 }
 
@@ -81,17 +101,20 @@ $image-bg: '/assets/house.jpg';
 
 #main-nav, #admin-nav, #spree-shop-nav {
   a {
-    color: #fff;
+    color: grey;
   }
 
   a:link {
-    color: #fff;
+    color: grey;
   }
   a:hover {
-    background-color: lighten(rgba(9, 22, 33, 0.4), 60%);
+    //background-color: lighten(rgba(9, 22, 33, 0.4), 60%);
+    text-decoration: underline;
   }
   .active {
-    background-color: darken(#A9A9A9, 20%);
+    background-color: transparent;
+    color: darken(slategrey, 20%);
+    text-decoration: underline;
   }
 }
 
@@ -145,7 +168,7 @@ input[type=submit] {
   p {
     margin: 0 0 0 5px;
     padding: 0;
-    color: #fff;
+    color: $text_color;
     font-weight: 50;
   }
 }
@@ -162,6 +185,7 @@ input[type=submit] {
   border-radius: 5px;
   width: auto;
   padding: 10px 10px 20px 10px;
+  border: 1px solid $text_color;
   #price-box {
     display: inline-block;
     width: 230px;
@@ -231,9 +255,6 @@ input[type=submit] {
 
 //------------------------------------
 
-footer {
-  margin-top: 10px;
-}
 
 .hide-elem {
   display: none;
@@ -294,6 +315,23 @@ footer {
   border-radius: 5px;
   float: right;
   background-color: transparent;
+}
+
+
+// FOOTER____________________________________________________
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  background: $bg_color;
+  height: 30px;
+  width: 100%;
+  z-index: 10000;
+  p {
+    margin: 5px 10px;
+    color: slategrey;
+  }
+
 }
 
 

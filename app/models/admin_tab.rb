@@ -1,5 +1,5 @@
 class AdminTab < ActiveRecord::Base
-  has_many :admin_sections
+  has_many :admin_sections, :dependent => :destroy
 
   validates :name, :presence => {:message => '?'}
 
