@@ -1,6 +1,6 @@
 //Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
 
-$body-bg: rgba(9, 22, 33, 0.4) !default;
+$body-bg: white !default;
 
 $component-active-bg: black !default;
 
@@ -14,21 +14,18 @@ $component-active-bg: black !default;
 }
 
 //** Background for the dropdown menu.
-$dropdown-bg: black !default;
+$dropdown-bg: grey !default;
 
 $icon-font-path: "../../bootstrap/";
 @import "bootstrap";
 
 // -- Spree Custom Header and Footer ---------------------
 #spree-header {
-  //  background: #1c5c92 asset-url('spree_header.jpg') center center;
-  //  background-color: black;
 
   background-size: cover;
   margin-bottom: $line-height-computed;
 
   #header {
-    background: black;
     height: 120px;
   }
 
@@ -43,8 +40,14 @@ $icon-font-path: "../../bootstrap/";
     left: 75%;
   }
 
+
+
   /****************************************************************/
   // MAIN MENU
+
+  #spree-shop {
+    background: whitesmoke;
+  }
 
   #spree-shop-nav {
     width: 280px;
@@ -70,14 +73,18 @@ $icon-font-path: "../../bootstrap/";
     img {
       margin-left: 15px;
       margin-top: 10px;
+      border: 1px solid black;
     }
   }
 
-  .nav a {
-    color: #fff;
+  .nav a, .navbar-nav a {
+    color: grey;
     &:hover {
-      background: lighten(rgba(9, 22, 33, 0.4), 60%);
+      text-decoration: underline;
+      background: none;
     }
+
+
   }
   .navbar {
     border: 0;
@@ -86,10 +93,10 @@ $icon-font-path: "../../bootstrap/";
 }
 
 #spree-footer {
-  background: $gray-dark;
+  background: white;
   padding-top: $padding-base-horizontal;
   margin-top: $line-height-computed;
-  color: #fff;
+  color: grey;
 }
 
 // -- Spree Layout Custom Rules -------------------------

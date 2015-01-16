@@ -7,6 +7,17 @@
   <% end %>
 </div>
 
+<style>
+  .inov-award {
+      margin: 20px 40px 0 0;
+      border: 1px solid #d3d3d3;
+      border-radius: 5px;
+  }
+  #main-nav {
+      margin-top: 5px;
+  }
+</style>
+
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -15,12 +26,14 @@
     <a class="navbar-brand" href="/">
       <%= image_tag 'ladderclampz_logo.png', id: 'logo', size: '200x100', alt: 'ladderclampz', class: 'img-responsive' %>
     </a>
+
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
     <div class="navbar-collapse collapse">
+      <%= image_tag 'innovation_award.jpg', alt: 'innovation', class: 'inov-award', size: '600x52'%>
       <%= render_navigation :context => :main, :expand_all => true, :renderer => :bootstrap %>
     </div>
     <!--/.nav-collapse -->

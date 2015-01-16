@@ -3,7 +3,8 @@
 $zindex_button: 200;
 $zindex_slider: 100;
 
-$bg_color: whitesmoke;
+$bg_color: white;
+$bg_navbar_color: whitesmoke;
 $text_color: #428bca;
 
 $image-bg: '/assets/home_image.png';
@@ -12,33 +13,28 @@ header {
   height: 120px;
 }
 
-.main-body {
-
-}
-
-
 .bg-image {
-  //background: $bg_color;
-  background-image: url($image-bg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background: $bg_color;
+  // background-image: url($image-bg);
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-attachment: fixed;
 
-  /*Add the browser prefixed CSS first:*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  // Add the browser prefixed CSS first:
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 }
 
 .navbar-inverse {
-  background-color: $bg_color;
+  background-color: $bg_navbar_color;
   border: none;
 }
 
 
-.storefront {
-
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: grey;
 }
 
 .text-color-red {
@@ -147,8 +143,8 @@ input[type=submit] {
   button, #brochure {
     margin: 7px 25px 7px 0px;
     float: left;
-    background-color: transparent;
-    color: #fff;
+    background-color: #f5f5f5;
+    color: lighten(black, 40%);
     &:hover {
       background-color: #f5f5f5;
       color: lighten(black, 10%);
@@ -158,7 +154,7 @@ input[type=submit] {
 
 .social-media {
   float: left;
-  width: 180px;
+  width: 240px;
   margin: 10px 10px 10px 10px;
   img {
     height: 35px;
@@ -166,7 +162,7 @@ input[type=submit] {
     width: auto;
   }
   p {
-    margin: 0 0 0 5px;
+    margin: 0 0 5px 5px;
     padding: 0;
     color: $text_color;
     font-weight: 50;
@@ -185,7 +181,7 @@ input[type=submit] {
   border-radius: 5px;
   width: auto;
   padding: 10px 10px 20px 10px;
-  border: 1px solid $text_color;
+  border: 1px solid lightgrey;
   #price-box {
     display: inline-block;
     width: 230px;
@@ -239,6 +235,12 @@ input[type=submit] {
   transform: scale(1.1);
 }
 
+cite {
+  font-style: italic !important;
+  color: #428bca;
+  font-size: 0.8em;
+}
+
 //------------------------------------
 //BX-SLIDER
 
@@ -277,6 +279,12 @@ input[type=submit] {
   float: left;
   height: 460px;
   border-radius: 5px;
+
+  //box shadow
+-webkit-box-shadow: 6px 2px 9px -1px rgba(0,0,0,0.28);
+-moz-box-shadow: 6px 2px 9px -1px rgba(0,0,0,0.28);
+box-shadow: 6px 2px 9px -1px rgba(0,0,0,0.28);
+
   overflow: auto;
   p {
     text-align: justify;
@@ -323,7 +331,7 @@ input[type=submit] {
 footer {
   position: fixed;
   bottom: 0px;
-  background: $bg_color;
+  background: $bg_navbar_color;
   height: 30px;
   width: 100%;
   z-index: 10000;
